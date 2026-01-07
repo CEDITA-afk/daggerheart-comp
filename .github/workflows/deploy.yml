@@ -21,6 +21,7 @@ jobs:
       - name: Build Web
         run: |
           flutter build web --release \
+            --base-href "/daggerheart-comp/" \
             --dart-define=FIREBASE_API_KEY=${{ secrets.FIREBASE_API_KEY }} \
             --dart-define=FIREBASE_APP_ID=${{ secrets.FIREBASE_APP_ID }} \
             --dart-define=FIREBASE_MESSAGING_SENDER_ID=${{ secrets.FIREBASE_MESSAGING_SENDER_ID }} \
