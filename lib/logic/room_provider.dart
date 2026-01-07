@@ -1,80 +1,90 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'dart:math';
 import '../data/models/character.dart';
-import '../data/models/adversary.dart'; // Assicurati di avere un modello base per i combattenti
 
 class RoomProvider extends ChangeNotifier {
   final FirebaseFirestore _db = FirebaseFirestore.instance;
   
   String? currentRoomCode;
   bool isGm = false;
-  String? myCharacterId; // ID del personaggio corrente (se giocatore)
+  String? myUserId; // ID univoco dell'utente (GM o Giocatore) sul dispositivo
 
   // Dati della stanza
   int fear = 0;
   int actionTokens = 0;
-  List<dynamic> activeCombatantsData = []; // Lista mista (Nemici + PG)
+  List<dynamic> activeCombatantsData = []; 
   
-  // Stream dei giocatori nella Lobby (per il GM)
   Stream<QuerySnapshot>? playersStream;
 
-  // --- INIZIALIZZAZIONE (RECUPERO SESSIONE) ---
+  // --- INIZIALIZZAZIONE ---
   Future<void> init() async {
     final prefs = await SharedPreferences.getInstance();
+    
+    // Generiamo un ID univoco per questo dispositivo se non esiste
+    if (!prefs.containsKey('user_device_id')) {
+      String newId = DateTime.now().millisecondsSinceEpoch.toString() + Random().nextInt(1000).toString();
+      await prefs.setString('user_device_id', newId);
+    }
+    myUserId = prefs.getString('user_device_id');
+
+    // Controllo se c'era una sessione aperta
     final savedRoom = prefs.getString('room_code');
     final savedIsGm = prefs.getBool('is_gm') ?? false;
-    final savedCharId = prefs.getString('char_id');
 
     if (savedRoom != null) {
-      print("Tentativo di riconnessione alla stanza: $savedRoom");
-      // Tentiamo di riconnetterci silenziosamente
+      // Tentiamo di riconnetterci
       try {
         DocumentSnapshot snap = await _db.collection('rooms').doc(savedRoom).get();
         if (snap.exists) {
           currentRoomCode = savedRoom;
           isGm = savedIsGm;
-          myCharacterId = savedCharId;
           _listenToRoom(savedRoom);
-          if (isGm) {
-            _listenToPlayers(savedRoom);
-          }
+          if (isGm) _listenToPlayers(savedRoom);
           notifyListeners();
         }
       } catch (e) {
-        print("Errore riconnessione: $e");
-        await clearSession(); // Se fallisce, puliamo tutto
+        await exitRoom();
       }
     }
   }
 
-  Future<void> clearSession() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.clear();
-    currentRoomCode = null;
-    isGm = false;
-    myCharacterId = null;
-    playersStream = null;
-    notifyListeners();
+  // --- GM: GESTIONE STANZE ---
+  
+  // Ottieni le stanze create da questo GM in passato
+  Stream<QuerySnapshot> getMyRooms() {
+    if (myUserId == null) return const Stream.empty();
+    return _db.collection('rooms')
+      .where('gmId', isEqualTo: myUserId)
+      .orderBy('createdAt', descending: true)
+      .snapshots();
   }
 
-  // --- GM: CREAZIONE STANZA ---
-  Future<String> createRoom(String gmName) async {
+  Future<String> createRoom(String gmName, String roomName) async {
     String code = DateTime.now().millisecondsSinceEpoch.toString().substring(7, 13);
     
     await _db.collection('rooms').doc(code).set({
+      'roomName': roomName,
       'gmName': gmName,
+      'gmId': myUserId, // Salviamo l'ID del proprietario
       'createdAt': FieldValue.serverTimestamp(),
       'fear': 0,
       'actionTokens': 0,
-      'combatActive': false,
       'combatants': [], 
     });
 
+    await _enterRoomAsGm(code);
+    return code;
+  }
+
+  Future<void> resumeRoom(String code) async {
+    await _enterRoomAsGm(code);
+  }
+
+  Future<void> _enterRoomAsGm(String code) async {
     currentRoomCode = code;
     isGm = true;
-    
-    // Salvataggio Sessione
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('room_code', code);
     await prefs.setBool('is_gm', true);
@@ -82,24 +92,53 @@ class RoomProvider extends ChangeNotifier {
     _listenToRoom(code);
     _listenToPlayers(code);
     notifyListeners();
-    return code;
   }
 
-  // --- GIOCATORE: UNISCITI ALLA STANZA ---
+  // --- GM: GESTIONE COMBATTIMENTO ---
+
+  Future<void> syncCombatData(int newFear, int newTokens, List<dynamic> allCombatants) async {
+    if (!isGm || currentRoomCode == null) return;
+
+    List<Map<String, dynamic>> combatJson = allCombatants.map((e) {
+      return {
+        'id': e.id,
+        'name': e.name,
+        'currentHp': e.currentHp,
+        'maxHp': e.maxHp,
+        'isPlayer': e is Character,
+        // Salviamo anche l'immagine o altri dati se servono
+      };
+    }).toList();
+
+    await _db.collection('rooms').doc(currentRoomCode).update({
+      'fear': newFear,
+      'actionTokens': newTokens,
+      'combatants': combatJson,
+    });
+  }
+
+  Future<void> clearCombat() async {
+    if (!isGm || currentRoomCode == null) return;
+    
+    // Mantiene Paura e Token, ma svuota i combattenti
+    await _db.collection('rooms').doc(currentRoomCode).update({
+      'combatants': [],
+    });
+    // Nota: il CombatProvider locale deve essere pulito separatamente dalla UI
+  }
+
+  // --- GIOCATORE ---
   Future<void> joinRoom(String code, Character character) async {
     DocumentReference roomRef = _db.collection('rooms').doc(code);
     DocumentSnapshot snap = await roomRef.get();
 
     if (!snap.exists) throw Exception("Codice stanza non valido!");
 
-    // Aggiungi il personaggio alla stanza
     await roomRef.collection('players').doc(character.id).set(character.toJson());
 
     currentRoomCode = code;
     isGm = false;
-    myCharacterId = character.id;
-
-    // Salvataggio Sessione
+    
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('room_code', code);
     await prefs.setBool('is_gm', false);
@@ -109,7 +148,20 @@ class RoomProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // --- ASCOLTO DATI ---
+  // --- COMUNE ---
+  Future<void> exitRoom() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.clear(); // Rimuove sessione
+    // Rigenera ID dispositivo per sicurezza
+    if (myUserId != null) await prefs.setString('user_device_id', myUserId!);
+    
+    currentRoomCode = null;
+    isGm = false;
+    playersStream = null;
+    activeCombatantsData = [];
+    notifyListeners();
+  }
+
   void _listenToRoom(String code) {
     _db.collection('rooms').doc(code).snapshots().listen((snapshot) {
       if (snapshot.exists) {
@@ -127,30 +179,5 @@ class RoomProvider extends ChangeNotifier {
   void _listenToPlayers(String code) {
     playersStream = _db.collection('rooms').doc(code).collection('players').snapshots();
     notifyListeners();
-  }
-
-  // --- GM: AGGIORNA TUTTO (COMBATTIMENTO) ---
-  // Ora salviamo l'intera lista dei combattenti (compresi i PG aggiunti)
-  Future<void> syncCombatData(int newFear, int newTokens, List<dynamic> allCombatants) async {
-    if (!isGm || currentRoomCode == null) return;
-
-    // Mappiamo i combattenti in un formato JSON semplificato per la vista
-    List<Map<String, dynamic>> combatJson = allCombatants.map((e) {
-      // Gestiamo sia Adversary che Character (assumendo abbiano campi simili o controllando il tipo)
-      return {
-        'id': e.id,
-        'name': e.name,
-        'currentHp': e.currentHp, // Assicurati che Character abbia questo campo o usa un getter
-        'maxHp': e.maxHp,
-        'isPlayer': e is Character, // Flag utile per colorarli diversamente
-        'initiative': 0, // Implementare se serve
-      };
-    }).toList();
-
-    await _db.collection('rooms').doc(currentRoomCode).update({
-      'fear': newFear,
-      'actionTokens': newTokens,
-      'combatants': combatJson,
-    });
   }
 }

@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart'; // Serve per controllare se siamo su Web (kIsWeb)
+import 'package:flutter/foundation.dart'; // Per kIsWeb
 import 'package:provider/provider.dart';
-import 'package:firebase_core/firebase_core.dart'; // Core di Firebase
+import 'package:firebase_core/firebase_core.dart';
 
-// --- IMPORTS DEI PROVIDER ---
+// --- PROVIDERS ---
 import 'logic/creation_provider.dart';
 import 'logic/combat_provider.dart';
-import 'logic/room_provider.dart'; // Gestione Stanze Online
-import 'logic/gm_provider.dart';   // Gestione Dashboard GM
+import 'logic/room_provider.dart';
+import 'logic/gm_provider.dart';
 
-// --- IMPORTS DEI DATI E UI ---
+// --- DATA ---
 import 'data/data_manager.dart';
-import 'ui/screens/character_list_screen.dart';
+
+// --- SCREENS ---
+import 'ui/screens/welcome_screen.dart'; // <--- NUOVA HOMEPAGE
 
 void main() async {
-  // Assicura che il motore grafico di Flutter sia pronto
   WidgetsFlutterBinding.ensureInitialized();
   
-  // --- INIZIALIZZA FIREBASE (MODALITÀ SICURA) ---
-  // Invece di scrivere le chiavi qui, le chiediamo all'ambiente di compilazione.
-  // Su GitHub: verranno prese dai "Secrets".
-  // In Locale: verranno prese dal file launch.json o dai parametri --dart-define.
-  
+  // --- INIZIALIZZA FIREBASE ---
+  // Usa le variabili d'ambiente per la sicurezza su GitHub Pages
   if (kIsWeb) {
     await Firebase.initializeApp(
       options: const FirebaseOptions(
@@ -32,14 +30,13 @@ void main() async {
       ),
     );
   } else {
-    // Se un giorno compilerai per Android/iOS, userà automaticamente il file google-services.json
+    // Per Android/iOS usa il file google-services.json
     await Firebase.initializeApp();
   }
 
-  // Carica tutti i JSON (Classi, Razze, Nemici) prima di avviare l'interfaccia
+  // Carica i dati JSON statici (Razze, Classi, ecc.)
   await DataManager().loadAllData();
   
-  // Avvia l'applicazione
   runApp(const MyApp());
 }
 
@@ -49,29 +46,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      // Qui registriamo TUTTI i cervelli dell'app
       providers: [
-        ChangeNotifierProvider(create: (_) => CreationProvider()), // Creazione Personaggi
-        ChangeNotifierProvider(create: (_) => CombatProvider()),   // Combattimento
-        ChangeNotifierProvider(create: (_) => RoomProvider()),     // Multiplayer Online
-        ChangeNotifierProvider(create: (_) => GmProvider()),       // Strumenti GM
+        ChangeNotifierProvider(create: (_) => CreationProvider()),
+        ChangeNotifierProvider(create: (_) => CombatProvider()),
+        ChangeNotifierProvider(create: (_) => RoomProvider()),
+        ChangeNotifierProvider(create: (_) => GmProvider()),
       ],
       child: MaterialApp(
         title: 'Daggerheart Companion',
         debugShowCheckedModeBanner: false,
-        
-        // --- TEMA SCURO & ORO ---
         theme: ThemeData.dark().copyWith(
-          scaffoldBackgroundColor: const Color(0xFF121212), // Nero profondo
-          primaryColor: const Color(0xFFD4AF37), // Oro Daggerheart
-          
+          scaffoldBackgroundColor: const Color(0xFF121212),
+          primaryColor: const Color(0xFFD4AF37),
           colorScheme: const ColorScheme.dark(
             primary: Color(0xFFD4AF37),
             secondary: Colors.amberAccent,
-            surface: Color(0xFF1E1E1E), // Grigio scuro per le Card
+            surface: Color(0xFF1E1E1E),
           ),
-          
-          // Stile AppBar
           appBarTheme: const AppBarTheme(
             backgroundColor: Color(0xFF1E1E1E),
             elevation: 0,
@@ -83,32 +74,24 @@ class MyApp extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          
-          // Stile Testo Base
           textTheme: const TextTheme(
             bodyMedium: TextStyle(fontFamily: 'Lato', color: Colors.white),
           ),
-          
-          // Stile Bottoni
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFFD4AF37),
-              foregroundColor: Colors.black, // Testo nero su bottone oro
+              foregroundColor: Colors.black,
             ),
           ),
-          
-          // Stile Campi di Testo (Input)
           inputDecorationTheme: const InputDecorationTheme(
             filled: true,
             fillColor: Colors.black26,
             border: OutlineInputBorder(),
             labelStyle: TextStyle(color: Colors.grey),
-            hintStyle: TextStyle(color: Colors.grey),
           ),
         ),
-        
-        // Schermata Iniziale
-        home: const CharacterListScreen(),
+        // Qui impostiamo la nuova schermata di benvenuto come punto di partenza
+        home: const WelcomeScreen(),
       ),
     );
   }
