@@ -1,0 +1,272 @@
+[
+  {
+    "id": "clank",
+    "name": "Clank",
+    "description": "Esseri meccanici senzienti creati con metallo, magia e ingranaggi.",
+    "features": [
+      {
+        "name": "Progetto Intenzionale",
+        "text": "Seleziona un'Esperienza che rifletta lo scopo per cui sei stato creato. Guadagni un bonus permanente di +1 a quell'Esperienza."
+      },
+      {
+        "name": "Efficiente",
+        "text": "Quando effettui un Riposo Breve, puoi scegliere una delle opzioni del Riposo Lungo invece di quelle del Riposo Breve."
+      }
+    ]
+  },
+  {
+    "id": "daemon",
+    "name": "Demone",
+    "description": "Discendenti di entità infernali, spesso temuti o incompresi.",
+    "features": [
+      {
+        "name": "Senza Paura",
+        "text": "Quando effettui un tiro con Paura, puoi marcare 2 Stress per trasformarlo in un tiro con Speranza."
+      },
+      {
+        "name": "Volto del Terrore",
+        "text": "Hai Vantaggio sui tiri per Intimidire qualsiasi creatura che non sia un demone."
+      }
+    ]
+  },
+  {
+    "id": "drakona",
+    "name": "Drakona",
+    "description": "Umanoidi draconici con scaglie resistenti e il potere degli elementi.",
+    "features": [
+      {
+        "name": "Scaglie Protettive",
+        "text": "Le tue scaglie offrono protezione naturale. Quando subiresti danno Grave, puoi marcare 1 Stress per subire invece danno Maggiore (o ridurre di 1 i PF persi)."
+      },
+      {
+        "name": "Soffio Elementale",
+        "text": "Scegli un elemento (fuoco, ghiaccio, fulmine, acido). Puoi usare il tuo soffio contro un bersaglio o gruppo entro Distanza Molto Ravvicinata come arma su Istinto che infligge d8 danni magici (usa la tua Competenza)."
+      }
+    ]
+  },
+  {
+    "id": "dwarf",
+    "name": "Nano",
+    "description": "Robusti abitanti delle montagne, noti per la loro tempra e maestria.",
+    "features": [
+      {
+        "name": "Pelle Dura",
+        "text": "Quando subisci danno ai Punti Ferita, puoi spendere 3 Stress per prevenire la perdita di 1 Punto Ferita."
+      },
+      {
+        "name": "Tempra Nanica",
+        "text": "Possiedi 1 Slot Armatura aggiuntivo permanente."
+      }
+    ]
+  },
+  {
+    "id": "elf",
+    "name": "Elfo",
+    "description": "Esseri agili e longevi con una naturale affinità per la magia e la percezione.",
+    "features": [
+      {
+        "name": "Trance Celestiale",
+        "text": "Durante un riposo, puoi entrare in trance invece di dormire. Questo ti permette di scegliere un'opzione di downtime (tempo libero) aggiuntiva."
+      },
+      {
+        "name": "Riflessi Soprannaturali",
+        "text": "Quando effettui un tiro di Reazione, puoi marcare 1 Stress per ottenere Vantaggio al tiro."
+      }
+    ]
+  },
+  {
+    "id": "faerie",
+    "name": "Fata",
+    "description": "Piccole creature alate legate al capriccioso regno fatato.",
+    "features": [
+      {
+        "name": "Ali",
+        "text": "Puoi volare. Se termini il tuo turno in volo senza atterrare, cadi."
+      },
+      {
+        "name": "Fortuna Fatata",
+        "text": "Puoi spendere 1 Speranza per ritirare i tuoi Dadi Dualità (devi tenere il nuovo risultato)."
+      }
+    ]
+  },
+  {
+    "id": "faun",
+    "name": "Fauno",
+    "description": "Umanoidi con gambe caprine, amanti della natura e della musica.",
+    "features": [
+      {
+        "name": "Balzo Caprino",
+        "text": "Puoi saltare in qualsiasi punto entro Distanza Ravvicinata come parte del tuo movimento normale."
+      },
+      {
+        "name": "Calcio",
+        "text": "Quando colpisci un bersaglio in mischia, puoi marcare 1 Stress per infliggere +2d6 danni e spingere te o il bersaglio a Distanza Molto Ravvicinata."
+      }
+    ]
+  },
+  {
+    "id": "firbolg",
+    "name": "Firbolg",
+    "description": "Giganti gentili delle foreste con una profonda connessione con piante e animali.",
+    "features": [
+      {
+        "name": "Carica",
+        "text": "Se ti muovi da Lontano o Molto Lontano fino alla Mischia e superi un tiro Agilità, puoi marcare 1 Stress per infliggere 1d12 danni fisici a tutti i nemici in mischia."
+      },
+      {
+        "name": "Incrollabile",
+        "text": "Quando dovresti marcare Stress, tira un d6. Se ottieni un 6, non marchi lo Stress."
+      }
+    ]
+  },
+  {
+    "id": "fungril",
+    "name": "Fungril",
+    "description": "Umanoidi fungini che prosperano nell'oscurità e nell'umidità.",
+    "features": [
+      {
+        "name": "Rete Miceliale",
+        "text": "Effettua un tiro Istinto (Difficoltà 12) per comunicare telepaticamente con altri Fungril a qualsiasi distanza."
+      },
+      {
+        "name": "Legame con la Morte",
+        "text": "Toccando un cadavere morto di recente, puoi marcare 1 Stress per porre una domanda allo spirito o rivivere i suoi ultimi istanti."
+      }
+    ]
+  },
+  {
+    "id": "galapa",
+    "name": "Galapa",
+    "description": "Umanoidi simili a tartarughe con un guscio naturale protettivo.",
+    "features": [
+      {
+        "name": "Guscio",
+        "text": "Aggiungi il valore della tua Competenza a tutte le tue Soglie di Danno."
+      },
+      {
+        "name": "Ritrarsi",
+        "text": "Puoi marcare 1 Stress per ritrarti nel tuo guscio. Mentre sei ritratto, guadagni Resistenza ai danni fisici ma non puoi muoverti o attaccare."
+      }
+    ]
+  },
+  {
+    "id": "giant",
+    "name": "Gigante",
+    "description": "Imponenti e forti, svettano sopra la maggior parte delle altre razze.",
+    "features": [
+      {
+        "name": "Resistenza",
+        "text": "Guadagni uno slot Punto Ferita aggiuntivo permanente alla creazione del personaggio."
+      },
+      {
+        "name": "Portata",
+        "text": "Considera qualsiasi arma o abilità con raggio Mischia come se avesse raggio Molto Ravvicinato."
+      }
+    ]
+  },
+  {
+    "id": "goblin",
+    "name": "Goblin",
+    "description": "Piccoli, scaltri e pieni di risorse, sopravvivono grazie all'ingegno.",
+    "features": [
+      {
+        "name": "Passo Sicuro",
+        "text": "Ignori lo Svantaggio su qualsiasi tiro di Agilità."
+      },
+      {
+        "name": "Senso del Pericolo",
+        "text": "Una volta per riposo, quando tu o un alleato vicino venite attaccati, puoi marcare 1 Stress per costringere il nemico a ritirare il dado di attacco."
+      }
+    ]
+  },
+  {
+    "id": "halfling",
+    "name": "Halfling",
+    "description": "Piccoli e fortunati, amano il comfort ma non temono l'avventura.",
+    "features": [
+      {
+        "name": "Portafortuna",
+        "text": "All'inizio di ogni sessione, ogni membro del gruppo (incluso te) guadagna 1 Speranza."
+      },
+      {
+        "name": "Bussola Interiore",
+        "text": "Quando ottieni un 1 sul Dado Speranza, puoi ritirarlo (devi tenere il nuovo risultato)."
+      }
+    ]
+  },
+  {
+    "id": "human",
+    "name": "Umano",
+    "description": "Ambiziosi e versatili, gli umani si adattano a qualsiasi situazione.",
+    "features": [
+      {
+        "name": "Spirito Adattabile",
+        "text": "Quando fallisci un tiro con Paura, puoi marcare 1 Stress per guadagnare 1 Speranza."
+      },
+      {
+        "name": "Tenacia",
+        "text": "Guadagni uno slot Stress aggiuntivo permanente."
+      }
+    ]
+  },
+  {
+    "id": "katari",
+    "name": "Katari",
+    "description": "Umanoidi felini agili e dai riflessi pronti.",
+    "features": [
+      {
+        "name": "Istinto Felino",
+        "text": "Quando effettui un tiro di Agilità, puoi spendere 2 Speranze per ritirare il Dado Speranza."
+      },
+      {
+        "name": "Artigli Retrattili",
+        "text": "Effettua un tiro di Agilità per graffiare un bersaglio in mischia. Se colpisci, infliggi danni pari alla tua Agilità."
+      }
+    ]
+  },
+  {
+    "id": "orc",
+    "name": "Orco",
+    "description": "Fieri guerrieri con una forza fisica e una resistenza leggendarie.",
+    "features": [
+      {
+        "name": "Robusto",
+        "text": "Quando ti rimane solo 1 Punto Ferita, tutti gli attacchi contro di te hanno Svantaggio."
+      },
+      {
+        "name": "Zanne",
+        "text": "Quando colpisci con un attacco in mischia, puoi spendere 1 Speranza per infliggere +1d6 danni aggiuntivi con le zanne."
+      }
+    ]
+  },
+  {
+    "id": "ribbet",
+    "name": "Ribbet",
+    "description": "Popolo anfibio simile a rane, eccellenti saltatori.",
+    "features": [
+      {
+        "name": "Anfibio",
+        "text": "Puoi respirare sott'acqua e muoverti in acqua alla tua normale velocità."
+      },
+      {
+        "name": "Lingua Lunga",
+        "text": "Puoi afferrare oggetti a Distanza Ravvicinata con la lingua. Puoi marcare 1 Stress per usare la lingua come arma 'Finesse' che infligge d12 danni fisici."
+      }
+    ]
+  },
+  {
+    "id": "simiah",
+    "name": "Simiah",
+    "description": "Simili a scimmie, sono arrampicatori nati e molto curiosi.",
+    "features": [
+      {
+        "name": "Scalatore Nato",
+        "text": "Hai Vantaggio sui tiri di Agilità per arrampicarti o mantenere l'equilibrio."
+      },
+      {
+        "name": "Agile",
+        "text": "Ottieni un bonus permanente di +1 alla tua Evasione."
+      }
+    ]
+  }
+]

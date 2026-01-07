@@ -1,0 +1,60 @@
+{
+  "id": "ranger_companion",
+  "name": "Compagno del Ranger",
+  "description": "Un fedele animale che combatte al fianco del Ranger, condividendo un legame indissolubile.",
+  "citation": "RANGER - COMPAGNO.pdf",
+  "core_stats": {
+    "base_evasion": 10,
+    "primary_domains": [],
+    "class_resource_name": "Legame"
+  },
+  "class_features": [
+    {
+      "id": "companion_bond",
+      "name": "Legame",
+      "type": "passive",
+      "text": "Effettuate un Tiro Incantesimo (Istinto) per ordinare al compagno di agire. Se ha successo, il compagno agisce. Spendete 1 Speranza per attivare una sua Esperienza."
+    },
+    {
+      "id": "companion_stress",
+      "name": "Stress Condiviso",
+      "type": "passive",
+      "text": "Quando il compagno subisce danno, marca Stress. Se riempe lo stress, esce di scena. Quando il Ranger rimuove Stress, anche il compagno ne rimuove altrettanto."
+    }
+  ],
+  "creation_guide": {
+    "recommended_traits": {
+      "agilita": 0, "forza": 0, "astuzia": 0, "istinto": 0, "presenza": 0, "conoscenza": 0
+    },
+    "starting_equipment_choices": [
+      {
+        "id": "loadout_companion_base",
+        "label": "Attacco Base",
+        "items": [
+          {
+            "type": "weapon",
+            "name": "Attacco Naturale",
+            "stats": "Mischia d6 fis (Livello 1)"
+          }
+        ]
+      }
+    ],
+    "selectable_items_options": []
+  },
+  "available_domains_filter": {
+    "instruction": "Il Compagno non usa carte dominio, ma guadagna Esperienze.",
+    "valid_domains": [],
+    "valid_level": 0
+  },
+  "narrative_prompts": {
+    "background_questions": [
+      "Come vi siete incontrati tu e il tuo compagno?",
+      "Quale comportamento particolare ha il tuo compagno?"
+    ],
+    "bond_questions": []
+  },
+  "special_mechanics": {
+    "experiences_start_value": 2,
+    "damage_die_progression": ["d6", "d8", "d10", "d12"]
+  }
+}

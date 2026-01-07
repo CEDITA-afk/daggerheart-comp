@@ -1,0 +1,746 @@
+[
+  {
+    "id": "the_gate_guardian",
+    "name": "The Gate Guardian",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Leader (Umbra-Touched)",
+    "description": "An ancient warrior, buried with the gate to protect entry; their skeletal mass is armored and their curved blade is deadly.",
+    "maxHp": 7,
+    "stress": 3,
+    "difficulty": 13,
+    "attack_name": "Curved Blade",
+    "attack_mod": 2,
+    "damage_dice": "1d10+3",
+    "thresholds": "6/13",
+    "features": [
+      {
+        "name": "Holy Buckler - Passive",
+        "text": "The Guardian has resistance to physical damage. When the Guardian takes physical damage from a PC within Melee range, the PC is pushed anywhere up to Very Close range of where it stood."
+      },
+      {
+        "name": "Sweeping Strike - Action",
+        "text": "Spend a Fear to make an attack against every PC within Very Close range in front of the Guardian."
+      },
+      {
+        "name": "Hallowed Cry - Reaction",
+        "text": "When the Guardian takes physical damage from an attack, you can spend a Fear to call a Skeleton Dredge from a nearby corpse."
+      }
+    ]
+  },
+  {
+    "id": "velk_the_forsaken",
+    "name": "Velk the Forsaken",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Solo (Umbra-Touched)",
+    "description": "Velk Dravenmoor, wounded and corrupted by dark powers, swells into a feral terror, frenzied and murderous.",
+    "maxHp": 10,
+    "stress": 0,
+    "difficulty": 14,
+    "attack_name": "Gravesword",
+    "attack_mod": 3,
+    "damage_dice": "1d12+3",
+    "thresholds": "7/14",
+    "features": [
+      {
+        "name": "Relentless (2) - Passive",
+        "text": "Velk can be spotlighted up to two times per GM turn. Spend Fear as usual to spotlight him."
+      },
+      {
+        "name": "Leaping Strike - Action",
+        "text": "Spend a Fear to allow Velk to leap anywhere within Far range and make an attack. On a success, he deals an additional 1d12 damage."
+      },
+      {
+        "name": "Spinning Blade - Action",
+        "text": "Spend a Fear to make a standard attack against all targets within Very Close range."
+      },
+      {
+        "name": "Throw - Action",
+        "text": "Mark a Stress to make an attack against a target within Melee range. On a success, deal 1d8+3 physical damage and the target must make a Strength Reaction Roll (13) or be moved anywhere within Close range."
+      },
+      {
+        "name": "Momentum - Reaction",
+        "text": "When Velk makes a successful attack against a PC, you gain a Fear."
+      }
+    ]
+  },
+  {
+    "id": "eryn_limb_wreath",
+    "name": "Eryn (Limb Wreath)",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Leader (Umbra-Touched)",
+    "description": "Eryn has become something of nightmares, a host for numerous tentacle limbs that grasp and spear, tearing apart all she once loved.",
+    "maxHp": 8,
+    "stress": 5,
+    "difficulty": 13,
+    "attack_name": "Limb Slam",
+    "attack_mod": 3,
+    "damage_dice": "2d6+2",
+    "thresholds": "6/13",
+    "features": [
+      {
+        "name": "Horrifying - Passive",
+        "text": "Targets who mark HP from the Limb Wreath's attacks must also mark a Stress."
+      },
+      {
+        "name": "Barrage of Tendrils - Action",
+        "text": "Spend a Fear to make an attack roll against up to 3 targets within Close range. Any you succeed against take 1d8+2 physical damage and must succeed on a Strength Reaction Roll (13) or be pulled in Melee range of the Limb Wreath."
+      },
+      {
+        "name": "Taste for Blood - Action",
+        "text": "Spend a Fear to make an attack against a target within Melee range. On a success, the target takes 2d8 physical damage, and the Limb Wreath clears 2 HP."
+      },
+      {
+        "name": "Living Tentacles - Reaction",
+        "text": "When the Limb Wreath marks 2 or more HP from an attack, you can mark a Stress to create a Living Tentacle within Very Close range. The Tentacle is immediately spotlighted."
+      }
+    ]
+  },
+  {
+    "id": "living_tentacle",
+    "name": "Living Tentacle",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Minion (Umbra-Touched)",
+    "description": "A part of the Limb Wreath is severed, twitching and moving on its own.",
+    "maxHp": 1,
+    "stress": 1,
+    "difficulty": 14,
+    "attack_name": "Whip",
+    "attack_mod": 1,
+    "damage_dice": "2",
+    "thresholds": "None",
+    "features": [
+      {
+        "name": "Horrifying - Passive",
+        "text": "Targets who mark HP from the Tentacle's attacks must also mark a Stress."
+      },
+      {
+        "name": "Minion (5) - Passive",
+        "text": "The Tentacle is defeated when they take any damage. For every 5 damage a PC deals to a Tentacle, defeat an additional Minion within range the attack would succeed against."
+      },
+      {
+        "name": "Group Attack - Action",
+        "text": "Spend a Fear to choose a target and spotlight all Tentacles within Close range of them. Those Minions move into Melee range of the target and make one shared attack roll. On a success, they deal 2 physical damage each. Combine this damage."
+      }
+    ]
+  },
+  {
+    "id": "pain_beast",
+    "name": "Pain Beast",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Bruiser",
+    "description": "Mutated, feral predators covered in patchy fur and scales, their claws deadly and their barbed tails venomous.",
+    "maxHp": 7,
+    "stress": 3,
+    "difficulty": 13,
+    "attack_name": "Claws",
+    "attack_mod": 2,
+    "damage_dice": "1d12+3",
+    "thresholds": "7/14",
+    "features": [
+      {
+        "name": "Paired Hunters - Passive",
+        "text": "When a Pain Beast attacks a target within Very Close range of another Pain Beast, the attack has advantage."
+      },
+      {
+        "name": "Pounce - Action",
+        "text": "Mark a Stress to move anywhere within Far range and make an attack against a target within Very Close range. On a success, the target takes 2d8+4 physical damage and marks a Stress."
+      },
+      {
+        "name": "Venomous Tail - Action",
+        "text": "Spend a Fear to make an attack roll against a target within Close range. On a success, the target takes 2d8 physical damage and, if they mark any number of HP, becomes Infected until they heal any number of HP. While Infected, they have disadvantage on action rolls."
+      },
+      {
+        "name": "Hide Spines - Reaction",
+        "text": "If an attacker is within Very Close range when the Pain Beast marks 2 or more HP, spend a Fear to deal 1d8+3 physical damage to the attacker."
+      }
+    ]
+  },
+  {
+    "id": "rotlord",
+    "name": "Rotlord",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Bruiser",
+    "description": "A massive nexus of forest will and dark magic, this tower of rotting flesh and fungal might seeks to increase its mass.",
+    "maxHp": 11,
+    "stress": 2,
+    "difficulty": 11,
+    "attack_name": "Limb Slam",
+    "attack_mod": 2,
+    "damage_dice": "1d20+3",
+    "thresholds": "9/18",
+    "features": [
+      {
+        "name": "Horrid Smell - Passive",
+        "text": "Targets who fail an action or roll with Fear within Close range of the Rotlord must mark a Stress."
+      },
+      {
+        "name": "Envelop - Action",
+        "text": "Make an attack against a target within Melee range. On a success, the Rotlord Envelops them and the target must mark a Stress. While Enveloped, the target must mark an additional Stress every time they make an action roll. When the Rotlord takes Severe damage, all Enveloped targets are freed and the condition is cleared."
+      },
+      {
+        "name": "Funky Backup - Action",
+        "text": "Spend a Fear to conjure 2 Caustic Fungus anywhere within Close range. These Fungus are immediately spotlighted."
+      },
+      {
+        "name": "Fear Spores - Reaction",
+        "text": "When a creature within Close range cannot mark a Stress and instead must mark HP, you gain a Fear."
+      }
+    ]
+  },
+  {
+    "id": "caustic_fungus",
+    "name": "Caustic Fungus",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Minion",
+    "description": "The underbrush of the Screaming Forest has a hive mind of its own.",
+    "maxHp": 1,
+    "stress": 1,
+    "difficulty": 12,
+    "attack_name": "Slam",
+    "attack_mod": 0,
+    "damage_dice": "2",
+    "thresholds": "None",
+    "features": [
+      {
+        "name": "Minion (4) - Passive",
+        "text": "Caustic Fungus is defeated when they take any damage. For every 4 damage a PC deals to a Caustic Fungus, defeat an additional Minion within range the attack would succeed against."
+      },
+      {
+        "name": "Corrosive - Passive",
+        "text": "Targets who are successfully hit by the Fungus' attacks must also mark an Armor Slot without receiving its benefits."
+      },
+      {
+        "name": "Group Attack - Action",
+        "text": "Spend a Fear to choose a target and spotlight all Caustic Fungus within Close range of them. Those Minions move into Melee range of the target and make one shared attack roll. On a success, they deal 2 physical damage each. Combine this damage."
+      }
+    ]
+  },
+  {
+    "id": "hive_collector",
+    "name": "Hive Collector",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Standard",
+    "description": "Seekers for Mother, they collect what might please her.",
+    "maxHp": 9,
+    "stress": 3,
+    "difficulty": 14,
+    "attack_name": "Face Stinger",
+    "attack_mod": 2,
+    "damage_dice": "1d8+3",
+    "thresholds": "7/16",
+    "features": [
+      {
+        "name": "Sleeping Sting - Action",
+        "text": "Make an attack against a target within Very Close range. On a success, they take 1d8+3 physical damage and must make a Instinct Reaction Roll (13). On a failure, they become Asleep until they take damage, or until 1d4 hours have passed. While Asleep, a PC cannot be spotlighted."
+      },
+      {
+        "name": "Tangle Net - Action",
+        "text": "Mark a Stress to make a target within Close range roll an Agility Reaction Roll (13). On a failure, they are Restrained and Vulnerable until they succeed on a Strength or Agility Action Roll (15)."
+      }
+    ]
+  },
+  {
+    "id": "mother",
+    "name": "Mother",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 2 Solo",
+    "description": "The Mother of the Hive, she seeks materials and subjects to conduct her strange biological experiments on.",
+    "maxHp": 11,
+    "stress": 4,
+    "difficulty": 15,
+    "attack_name": "Surgical Glaive",
+    "attack_mod": 3,
+    "damage_dice": "2d12+10",
+    "thresholds": "14/28",
+    "features": [
+      {
+        "name": "Surgical Accuracy - Passive",
+        "text": "Before Mother makes an attack, roll a d6. On a result of 4 or higher, the target's Evasion is halved against the attack."
+      },
+      {
+        "name": "To Me, My Children! - Action",
+        "text": "Mark a Stress to spotlight 1d4+1 allies. Attacks they make while spotlighted in this way deal half damage."
+      },
+      {
+        "name": "Sweeping Incision - Action",
+        "text": "Spend a Fear to make an attack against all targets within Close range. On a success, Mother deals 2d6+15 physical damage."
+      },
+      {
+        "name": "Acidic Mist - Reaction",
+        "text": "When Mother marks 2 or more HP from an attack within Very Close range, a cloud of caustic mist emits from her abdomen and all PCs within Very Close range mark an Armor Slot."
+      },
+      {
+        "name": "Momentum - Reaction",
+        "text": "When Mother makes a successful attack against a PC, you gain a Fear."
+      }
+    ]
+  },
+  {
+    "id": "glomtower_thrall",
+    "name": "Glomtower Thrall",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 2 Solo",
+    "description": "A towering being of sorrow and service, forever doomed to wander at Terrorgut's behest.",
+    "maxHp": 10,
+    "stress": 3,
+    "difficulty": 15,
+    "attack_name": "Chain Swing",
+    "attack_mod": 3,
+    "damage_dice": "2d20+15",
+    "thresholds": "13/26",
+    "features": [
+      {
+        "name": "Slow - Passive",
+        "text": "When you spotlight the Thrall and they don't have a token on their stat block, they can't act yet. Place a token on their stat block and describe what they're preparing to do. When you spotlight the Thrall and they have a token on their stat block, clear the token and they can act."
+      },
+      {
+        "name": "Dense But Clumsy - Passive",
+        "text": "An attack that would move the Thrall moves them two fewer range steps, and the Thrall must succeed on a Reaction Roll (10). On a failure, it falls over and becomes temporarily Restrained and Vulnerable. When it is no longer Restrained, it also is no longer Vulnerable."
+      },
+      {
+        "name": "Cage The Judged - Action",
+        "text": "Spend a Fear to make an attack against a target within Very Close range. On a success, the target takes 2d12+8 physical damage, is Restrained, and has disadvantage on attack rolls until they succeed on a Strength or Agility Action Roll (16)."
+      },
+      {
+        "name": "Cage Slam - Action",
+        "text": "Spend a Fear to make an attack against a target within Very Close range. On a success, the target and any PCs in the cage take 2d12+15 physical damage."
+      },
+      {
+        "name": "Momentum - Reaction",
+        "text": "When the Thrall makes a successful attack against a PC, you gain a Fear."
+      },
+      {
+        "name": "Kick - Reaction",
+        "text": "Mark a Stress when the Thrall marks 2 or more HP from a PC attack within Very Close range. Then, immediately make an attack against the attacker. On a success, they take 2d6+8 physical damage and are pushed to Far range."
+      }
+    ]
+  },
+  {
+    "id": "elite_hive_collector",
+    "name": "Elite Hive Collector",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 2 Standard",
+    "description": "Seekers for Mother, they collect what might please her.",
+    "maxHp": 9,
+    "stress": 3,
+    "difficulty": 15,
+    "attack_name": "Face Stinger",
+    "attack_mod": 2,
+    "damage_dice": "2d6+9",
+    "thresholds": "8/19",
+    "features": [
+      {
+        "name": "Sleeping Sting - Action",
+        "text": "Make an attack against a target within Very Close range. On a success, they take 2d6+10 physical damage and must make a Instinct Reaction Roll (15). On a failure, they become Asleep until they take damage, or until 1d4 hours have passed. While Asleep, a PC cannot be spotlighted."
+      },
+      {
+        "name": "Tangle Net - Action",
+        "text": "Mark a Stress to make a target within Close range roll an Agility Reaction Roll (13). On a failure, they are Restrained and Vulnerable until they succeed on a Strength or Agility Action Roll (15)."
+      }
+    ]
+  },
+  {
+    "id": "terrorgut",
+    "name": "Terrorgut",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 2 Solo (Umbra-Touched)",
+    "description": "A ravenous demon unleashed through dark magic, it claims its domain to enslave and devour the souls of those who fail to bend to its will.",
+    "maxHp": 11,
+    "stress": 4,
+    "difficulty": 15,
+    "attack_name": "Bone Whip",
+    "attack_mod": 3,
+    "damage_dice": "2d12+10",
+    "thresholds": "14/28",
+    "features": [
+      {
+        "name": "Terrifying - Passive",
+        "text": "When Terrorgut makes a successful attack, all PCs within Far range lose a Hope and you gain a Fear."
+      },
+      {
+        "name": "Demon Armor - Passive",
+        "text": "When Terrorgut takes physical damage, reduce it by 3."
+      },
+      {
+        "name": "Release Shambling Zombie - Action",
+        "text": "Spend a Fear to create a Shambling Zombie within Very Close range. The Shambling Zombie is immediately spotlighted."
+      },
+      {
+        "name": "Devour - Action",
+        "text": "Spend a Fear to make an attack against a PC within Very Close range. On a success, they take 2d8+10 physical damage and must succeed on a Strength Reaction Roll (16). On a failure, they are eaten and become Restrained until they succeed on a Strength or Agility Action Roll (16). Along with having the Restrained condition, every time they attempt an action roll, or an ally attempts an action roll to help them escape, they take 2d8+10 magical damage."
+      },
+      {
+        "name": "Get Over Here - Reaction",
+        "text": "When you mark 2 or more HP from a PC attack within Close range, you can mark a Stress and roll an attack against the attacker. On a success, they take 2d10+10 physical damage, mark a Stress, and are pulled into Melee range."
+      }
+    ]
+  },
+  {
+    "id": "damask_ambusher",
+    "name": "Damask Ambusher",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 2 Skulk",
+    "description": "A hardened cutthroat and thief who hunts for the Queens.",
+    "maxHp": 5,
+    "stress": 4,
+    "difficulty": 14,
+    "attack_name": "Long Knife",
+    "attack_mod": 2,
+    "damage_dice": "2d6+8",
+    "thresholds": "8/17",
+    "features": [
+      {
+        "name": "Backstab - Passive",
+        "text": "When the Ambusher succeeds on a standard attack that has advantage, they deal 2d10+10 physical damage instead of their standard damage."
+      },
+      {
+        "name": "Cloaked - Action",
+        "text": "Become Hidden until after the Ambusher's next attack. Attacks made while Hidden from this feature have advantage."
+      }
+    ]
+  },
+  {
+    "id": "damask_marauder_band",
+    "name": "Damask Marauder Band",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 2 Horde (2/HP)",
+    "description": "A crew of cackling killers relishing in chaos and plunder.",
+    "maxHp": 6,
+    "stress": 4,
+    "difficulty": 14,
+    "attack_name": "Long Blade",
+    "attack_mod": 1,
+    "damage_dice": "2d8+5",
+    "thresholds": "10/21",
+    "features": [
+      {
+        "name": "Horde (2d4+2) - Passive",
+        "text": "When the Band has marked half or more of their HP, their standard attack deals 2d4+2 physical damage instead."
+      },
+      {
+        "name": "Sadistic Laughter - Reaction",
+        "text": "When a target of the Band's attack marks 2 or more HP, you can mark a Stress to make all targets within Very Close range lose a Hope. If a target is not able to lose a Hope, they must instead mark 2 Stress."
+      }
+    ]
+  },
+  {
+    "id": "damask_archer_squad",
+    "name": "Damask Archer Squad",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 2 Horde (2/HP)",
+    "description": "Ranged raiders of the Damask Queens.",
+    "maxHp": 4,
+    "stress": 3,
+    "difficulty": 13,
+    "attack_name": "Bow",
+    "attack_mod": 0,
+    "damage_dice": "2d6+5",
+    "thresholds": "8/16",
+    "features": [
+      {
+        "name": "Horde (1d6+3) - Passive",
+        "text": "When the Squad has marked half or more of their HP, their standard attack deals 1d6+3 physical damage instead."
+      },
+      {
+        "name": "Focused Volley - Action",
+        "text": "Spend a Fear to target a point within Far range. Make an attack with advantage against all targets within Close range of that point. Any you succeed against take 1d10+4 physical damage."
+      },
+      {
+        "name": "Suppressing Fire - Action",
+        "text": "Mark a Stress to target a point within Far range. Until the next roll with Fear, a creature who moves within Close range of that point must make an Agility Reaction Roll (14). On a failure, they take 2d6+3 physical damage. On a success, they take half."
+      }
+    ]
+  },
+  {
+    "id": "corrupted_fane_warden",
+    "name": "Corrupted Fane Warden",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 2 Solo (Umbra-Touched)",
+    "description": "The once beloved protector of the weald now stews in corruption, half-mad and seeking blood for their blade as penance for the land's decay.",
+    "maxHp": 9,
+    "stress": 4,
+    "difficulty": 15,
+    "attack_name": "Blade of the Fane",
+    "attack_mod": 3,
+    "damage_dice": "2d10+5",
+    "thresholds": "13/25",
+    "features": [
+      {
+        "name": "Relentless (2) - Passive",
+        "text": "The Fane Guardian can be spotlighted up to two times per GM turn. Spend Fear as usual to spotlight them."
+      },
+      {
+        "name": "Glimmer Within - Passive",
+        "text": "A flame of ancient magic still burns within the Fane Warden. Whenever a PC would cause the Fane Warden to heal HP or Stress, start a Progress Countdown (4), reducing it by 1 each additional time it would be healed one HP or Stress. When this countdown would count below 1, the Warden is restored."
+      },
+      {
+        "name": "Overwhelming Arc - Action",
+        "text": "Spend a Fear to make an attack against every target within Very Close range. On a success, they take 2d10+10 physical damage and must make a Strength Reaction Roll (15). On a failure, they are pushed away to Far range of their location."
+      },
+      {
+        "name": "Vine Spear - Action",
+        "text": "Spend a Fear to have a target within Far range make a Strength Reaction Roll (15). On a failure, they are pulled to anywhere within Very Close range of the Fane Warden and the Fane Warden immediately makes an attack against them."
+      },
+      {
+        "name": "Take Root - Action",
+        "text": "Mark a Stress to Root the Fane Warden in place. Fane Warden is Restrained while Rooted, and can end this effect instead of moving while they are spotlighted. While Rooted, Fane Warden has resistance to physical damage."
+      },
+      {
+        "name": "Righteous Vengeance - Reaction",
+        "text": "When the Fane Warden marks 2 or more HP from an attack within Very Close range, mark a Stress to make a standard attack against the attacker. On a success, the Fane Warden deals 2d10+10 physical damage and the target is pushed to Far range."
+      }
+    ]
+  },
+  {
+    "id": "blasphemous_angel_evelyar",
+    "name": "Blasphemous Angel Evelyar",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 2 Solo (Umbra-Touched)",
+    "description": "Her holy mission slandered and her compassion punished for audacity, a darker power became seeded within her buried and bound soul. The Grand Ordinants created their own dark prophesy.",
+    "maxHp": 12,
+    "stress": 8,
+    "difficulty": 14,
+    "attack_name": "Malediction Axe",
+    "attack_mod": 3,
+    "damage_dice": "2d10+4",
+    "thresholds": "12/24",
+    "features": [
+      {
+        "name": "Relentless (2) - Passive",
+        "text": "Evelyar can be spotlighted up to two times per GM turn. Spend Fear as usual to spotlight her."
+      },
+      {
+        "name": "Unholy Aura - Passive",
+        "text": "When Evelyar takes damage, reduce it by the number of Profane Disciples within Close range. When a PC marks their last HP within Close range of Evelyar, she heals a HP and clears a Stress."
+      },
+      {
+        "name": "Arc of Judgement - Action",
+        "text": "Spend a Fear to make an attack against all targets within Very Close range. On a success, they take 2d8+5 physical damage."
+      },
+      {
+        "name": "The Flock's Call - Action",
+        "text": "Mark a Stress to spotlight 1d4+1 allies. Attacks they make during this spotlight deal half damage."
+      },
+      {
+        "name": "Look Into The Void - Action",
+        "text": "Mark a Stress to have a PC within Very Close range make an Insight or Presence Reaction Roll. On a failure, they mark a Stress, they become Vulnerable until they roll a success with Hope, and Evelyar heals 2 HP."
+      },
+      {
+        "name": "Blasphemous Choir - Reaction",
+        "text": "Countdown (Loop 1d8). When Evelyar is in the spotlight for the first time, activate the countdown. When it triggers, a choir of discordant voices covers an area within Far range of Evelyar. When a target marks HP from an attack by Evelyar within the dark song, all PCs within Far range of the target lose a Hope. This song can be ended by dealing Severe damage to Evelyar, after which the countdown restarts."
+      }
+    ]
+  },
+  {
+    "id": "profane_disciple",
+    "name": "Profane Disciple",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 2 Standard",
+    "description": "One of the disciples of Evelyar, betrayed by the clergy and forgotten with their heretical Saint. Their vengeful furvor is fueled by Evelyar's madness.",
+    "maxHp": 7,
+    "stress": 3,
+    "difficulty": 14,
+    "attack_name": "Sorrowscythe",
+    "attack_mod": 2,
+    "damage_dice": "2d6+4",
+    "thresholds": "10/20",
+    "features": [
+      {
+        "name": "Dance of Condemnation - Passive",
+        "text": "When the Disciple is within Melee range of a creature and at least one other Disciple is within Close range, all attacks against that creature have advantage."
+      },
+      {
+        "name": "Retaliation - Reaction",
+        "text": "When Evelyar takes damage from an attack within Very Close range of the Disciple, mark a Stress to make a standard attack against the attacker."
+      }
+    ]
+  },
+  {
+    "id": "the_gate_guardian_standard",
+    "name": "The Gate Guardian (Standard)",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Leader (Umbra-Touched)",
+    "description": "An ancient warrior, buried with the gate to protect entry; their skeletal mass is armored and their curved blade is deadly.",
+    "maxHp": 6,
+    "stress": 3,
+    "difficulty": 13,
+    "attack_name": "Curved Blade",
+    "attack_mod": 2,
+    "damage_dice": "1d10+3",
+    "thresholds": "6/13",
+    "features": [
+      {
+        "name": "Holy Buckler - Passive",
+        "text": "The Guardian has resistance to physical damage. When the Guardian takes physical damage from a PC within Melee range, the PC is pushed anywhere up to Very Close range of where it stood."
+      },
+      {
+        "name": "Sweeping Strike - Action",
+        "text": "Spend a Fear to make an attack against every PC within Very Close range in front of the Guardian."
+      },
+      {
+        "name": "Hallowed Cry - Reaction",
+        "text": "When the Guardian takes physical damage from an attack, you can spend a Fear to call a Skeleton Dredge from a nearby corpse."
+      }
+    ]
+  },
+  {
+    "id": "velk_the_forsaken_standard",
+    "name": "Velk the Forsaken (Standard)",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Solo (Umbra-Touched)",
+    "description": "Velk Dravenmoor, wounded and corrupted by dark powers, swells into a feral terror, frenzied and murderous.",
+    "maxHp": 9,
+    "stress": 0,
+    "difficulty": 14,
+    "attack_name": "Gravesword",
+    "attack_mod": 3,
+    "damage_dice": "1d12+3",
+    "thresholds": "7/14",
+    "features": [
+      {
+        "name": "Relentless (2) - Passive",
+        "text": "Velk can be spotlighted up to two times per GM turn. Spend Fear as usual to spotlight him."
+      },
+      {
+        "name": "Leaping Strike - Action",
+        "text": "Spend a Fear to allow Velk to leap anywhere within Far range and make an attack. On a success, he deals an additional 1d12 damage."
+      },
+      {
+        "name": "Spinning Blade - Action",
+        "text": "Spend a Fear to make a standard attack against all targets within Very Close range."
+      },
+      {
+        "name": "Throw - Action",
+        "text": "Mark a Stress to make an attack against a target within Melee range. On a success, deal 1d8+3 physical damage and the target must make a Strength Reaction Roll (13) or be moved anywhere within Close range."
+      },
+      {
+        "name": "Momentum - Reaction",
+        "text": "When Velk makes a successful attack against a PC, you gain a Fear."
+      }
+    ]
+  },
+  {
+    "id": "eryn_limb_wreath_standard",
+    "name": "Eryn (Limb Wreath) (Standard)",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Leader (Umbra-Touched)",
+    "description": "Eryn has become something of nightmares, a host for numerous tentacle limbs that grasp and spear, tearing apart all she once loved.",
+    "maxHp": 7,
+    "stress": 5,
+    "difficulty": 13,
+    "attack_name": "Limb Slam",
+    "attack_mod": 3,
+    "damage_dice": "2d6+2",
+    "thresholds": "6/13",
+    "features": [
+      {
+        "name": "Horrifying - Passive",
+        "text": "Targets who mark HP from the Limb Wreath's attacks must also mark a Stress."
+      },
+      {
+        "name": "Barrage of Tendrils - Action",
+        "text": "Spend a Fear to make an attack roll against up to 3 targets within Close range. Any you succeed against take 1d8+2 physical damage and must succeed on a Strength Reaction Roll (13) or be pulled in Melee range of the Limb Wreath."
+      },
+      {
+        "name": "Taste for Blood - Action",
+        "text": "Spend a Fear to make an attack against a target within Melee range. On a success, the target takes 2d8 physical damage, and the Limb Wreath clears 2 HP."
+      },
+      {
+        "name": "Living Tentacles - Reaction",
+        "text": "When the Limb Wreath marks 2 or more HP from an attack, you can mark a Stress to create a Living Tentacle within Very Close range. The Tentacle is immediately spotlighted."
+      }
+    ]
+  },
+  {
+    "id": "living_tentacle_standard",
+    "name": "Living Tentacle (Standard)",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Minion (Umbra-Touched)",
+    "description": "A part of the Limb Wreath is severed, twitching and moving on its own.",
+    "maxHp": 1,
+    "stress": 1,
+    "difficulty": 14,
+    "attack_name": "Whip",
+    "attack_mod": 1,
+    "damage_dice": "2",
+    "thresholds": "None",
+    "features": [
+      {
+        "name": "Horrifying - Passive",
+        "text": "Targets who mark HP from the Tentacle's attacks must also mark a Stress."
+      },
+      {
+        "name": "Minion (5) - Passive",
+        "text": "The Tentacle is defeated when they take any damage. For every 5 damage a PC deals to a Tentacle, defeat an additional Minion within range the attack would succeed against."
+      },
+      {
+        "name": "Group Attack - Action",
+        "text": "Spend a Fear to choose a target and spotlight all Tentacles within Close range of them. Those Minions move into Melee range of the target and make one shared attack roll. On a success, they deal 2 physical damage each. Combine this damage."
+      }
+    ]
+  },
+  {
+    "id": "pain_beast_standard",
+    "name": "Pain Beast (Standard)",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Bruiser",
+    "description": "Mutated, feral predators covered in patchy fur and scales, their claws deadly and their barbed tails venomous.",
+    "maxHp": 6,
+    "stress": 3,
+    "difficulty": 13,
+    "attack_name": "Claws",
+    "attack_mod": 2,
+    "damage_dice": "1d12+3",
+    "thresholds": "7/14",
+    "features": [
+      {
+        "name": "Paired Hunters - Passive",
+        "text": "When a Pain Beast attacks a target within Very Close range of another Pain Beast, the attack has advantage."
+      },
+      {
+        "name": "Pounce - Action",
+        "text": "Mark a Stress to move anywhere within Far range and make an attack against a target within Very Close range. On a success, the target takes 2d8+4 physical damage and marks a Stress."
+      },
+      {
+        "name": "Venomous Tail - Action",
+        "text": "Spend a Fear to make an attack roll against a target within Close range. On a success, the target takes 2d8 physical damage and, if they mark any number of HP, becomes Infected until they heal any number of HP. While Infected, they have disadvantage on action rolls."
+      },
+      {
+        "name": "Hide Spines - Reaction",
+        "text": "If an attacker is within Very Close range when the Pain Beast marks 2 or more HP, spend a Fear to deal 1d8+3 physical damage to the attacker."
+      }
+    ]
+  },
+  {
+    "id": "rotlord_standard",
+    "name": "Rotlord (Standard)",
+    "campaign": "Age of Umbra",
+    "tier": "Tier 1 Bruiser",
+    "description": "A massive nexus of forest will and dark magic, this tower of rotting flesh and fungal might seeks to increase its mass.",
+    "maxHp": 9,
+    "stress": 2,
+    "difficulty": 11,
+    "attack_name": "Limb Slam",
+    "attack_mod": 2,
+    "damage_dice": "1d20+3",
+    "thresholds": "9/18",
+    "features": [
+      {
+        "name": "Horrid Smell - Passive",
+        "text": "Targets who fail an action or roll with Fear within Close range of the Rotlord must mark a Stress."
+      },
+      {
+        "name": "Envelop - Action",
+        "text": "Make an attack against a target within Melee range. On a success, the Rotlord Envelops them and the target must mark a Stress. While Enveloped, the target must mark an additional Stress every time they make an action roll. When the Rotlord takes Severe damage, all Enveloped targets are freed and the condition is cleared."
+      },
+      {
+        "name": "Funky Backup - Action",
+        "text": "Spend a Fear to conjure 2 Caustic Fungus anywhere within Close range. These Fungus are immediately spotlighted."
+      },
+      {
+        "name": "Fear Spores - Reaction",
+        "text": "When a creature within Close range cannot mark a Stress and instead must mark HP, you gain a Fear."
+      }
+    ]
+  }
+]

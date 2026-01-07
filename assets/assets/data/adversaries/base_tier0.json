@@ -1,0 +1,242 @@
+[
+  {
+    "id": "shambling_zombie",
+    "name": "Shambling Zombie",
+    "campaign": "Base Tier 0",
+    "tier": "Tier 0 Standard",
+    "description": "Un cadavere animato che si muove a scatti, guidato solo dalla fame.",
+    "maxHp": 4,
+    "stress": 1,
+    "difficulty": 10,
+    "attack_name": "Morso",
+    "attack_mod": 0,
+    "damage_dice": "1d6+1 phy",
+    "thresholds": "4/6",
+    "features": [
+      {
+        "name": "Too Many to Handle - Passive",
+        "text": "Quando lo Zombi e' in mischia con un bersaglio e c'e' almeno un altro Zombi vicino, i suoi attacchi hanno Vantaggio."
+      },
+      {
+        "name": "Undead Fortitude - Reaction",
+        "text": "Se un danno ridurrebbe lo Zombi a 0 PF, tira un d12. Se il risultato e' pari o superiore al danno subito, resta a 1 PF."
+      }
+    ]
+  },
+  {
+    "id": "zombie_horde",
+    "name": "Zombie Horde",
+    "campaign": "Base Tier 0",
+    "tier": "Tier 0 Horde (2/HP)",
+    "description": "Una massa di carne putrida che avanza inarrestabile.",
+    "maxHp": 6,
+    "stress": 3,
+    "difficulty": 8,
+    "attack_name": "Massa di Morsi",
+    "attack_mod": -1,
+    "damage_dice": "2d10 phy",
+    "thresholds": "7/13",
+    "features": [
+      {
+        "name": "Horde (2d6) - Passive",
+        "text": "Se l'Orda ha perso meta' o piu' dei suoi PF, il danno base diventa 2d6."
+      },
+      {
+        "name": "Overwhelm - Reaction",
+        "text": "Quando l'Orda subisce danno in mischia, marca uno Stress per attaccare immediatamente chi l'ha colpita."
+      }
+    ]
+  },
+  {
+    "id": "skeleton_dredge",
+    "name": "Skeleton Dredge",
+    "campaign": "Base Tier 0",
+    "tier": "Tier 0 Minion",
+    "description": "Ossa animate da magia oscura, fragili ma implacabili.",
+    "maxHp": 1,
+    "stress": 0,
+    "difficulty": 10,
+    "attack_name": "Artiglio Osseo",
+    "attack_mod": 1,
+    "damage_dice": "2",
+    "thresholds": "-",
+    "features": [
+      {
+        "name": "Minion (3) - Passive",
+        "text": "Viene sconfitto con qualsiasi danno. Per ogni 3 danni subiti, un altro Scheletro vicino viene distrutto."
+      },
+      {
+        "name": "Pile On - Action",
+        "text": "Spendi una Paura per attivare tutti gli Scheletri entro raggio Vicino a un bersaglio. Fanno un unico attacco combinato (+1 danno per scheletro)."
+      }
+    ]
+  },
+  {
+    "id": "jagged_knife_bandit",
+    "name": "Jagged Knife Bandit",
+    "campaign": "Base Tier 0",
+    "tier": "Tier 0 Standard",
+    "description": "Un criminale astuto con il simbolo della banda del Coltello Dentellato.",
+    "maxHp": 5,
+    "stress": 3,
+    "difficulty": 12,
+    "attack_name": "Pugnale",
+    "attack_mod": 1,
+    "damage_dice": "1d8+1 phy",
+    "thresholds": "8/14",
+    "features": [
+      {
+        "name": "From Above - Passive",
+        "text": "Se attacca da una posizione sopraelevata, infligge 1d10+1 danni invece del normale."
+      },
+      {
+        "name": "Throw Smoke - Reaction",
+        "text": "Quando subisce danno, marca uno Stress per diventare Nascosto e muoversi di una zona."
+      }
+    ]
+  },
+  {
+    "id": "jagged_knife_sniper",
+    "name": "Jagged Knife Sniper",
+    "campaign": "Base Tier 0",
+    "tier": "Tier 0 Ranged",
+    "description": "Un tiratore scelto che preferisce colpire dalle ombre.",
+    "maxHp": 4,
+    "stress": 2,
+    "difficulty": 11,
+    "attack_name": "Arco Corto",
+    "attack_mod": 2,
+    "damage_dice": "1d8 phy",
+    "thresholds": "6/12",
+    "features": [
+      {
+        "name": "Sniper's Nest - Passive",
+        "text": "Ha Vantaggio agli attacchi se non si e' mosso nel turno precedente."
+      },
+      {
+        "name": "Pin Down - Action",
+        "text": "Marca uno Stress per inchiodare un bersaglio (Trattenuto) invece di fare danni."
+      }
+    ]
+  },
+  {
+    "id": "inkblot",
+    "name": "Inkblot",
+    "campaign": "Base Tier 0",
+    "tier": "Tier 0 Minion",
+    "description": "Una piccola creatura fatta di inchiostro vivente, fastidiosa e scivolosa.",
+    "maxHp": 1,
+    "stress": 0,
+    "difficulty": 10,
+    "attack_name": "Schizzo",
+    "attack_mod": 1,
+    "damage_dice": "1",
+    "thresholds": "-",
+    "features": [
+      {
+        "name": "Minion (3) - Passive",
+        "text": "Viene sconfitto con qualsiasi danno. Per ogni 3 danni subiti, un altro Inkblot vicino viene distrutto."
+      },
+      {
+        "name": "Splat - Reaction",
+        "text": "Quando muore, esplode in una pozza di inchiostro. Chiunque nel raggio Vicino deve superare un tiro di Agilita' (10) o cadere a terra prono."
+      }
+    ]
+  },
+  {
+    "id": "giant_rat",
+    "name": "Giant Rat",
+    "campaign": "Base Tier 0",
+    "tier": "Tier 0 Minion",
+    "description": "Un roditore di dimensioni anomale, pericoloso in gruppo.",
+    "maxHp": 1,
+    "stress": 1,
+    "difficulty": 9,
+    "attack_name": "Morso Infetto",
+    "attack_mod": 1,
+    "damage_dice": "2",
+    "thresholds": "-",
+    "features": [
+      {
+        "name": "Minion (4) - Passive",
+        "text": "Viene sconfitto con qualsiasi danno. Per ogni 4 danni subiti, un altro Ratto vicino viene distrutto."
+      },
+      {
+        "name": "Pack Tactics - Passive",
+        "text": "Il Ratto ha Vantaggio se attacca un bersaglio che e' gia' ingaggiato in mischia con un alleato del Ratto."
+      }
+    ]
+  },
+  {
+    "id": "bramble_fox",
+    "name": "Bramble Fox",
+    "campaign": "Base Tier 0",
+    "tier": "Tier 0 Skulk",
+    "description": "Una volpe infusa di magia naturale, con spine che crescono sulla pelliccia.",
+    "maxHp": 3,
+    "stress": 2,
+    "difficulty": 12,
+    "attack_name": "Morso Spinoso",
+    "attack_mod": 2,
+    "damage_dice": "1d6+1 phy",
+    "thresholds": "5/10",
+    "features": [
+      {
+        "name": "Sneaky - Passive",
+        "text": "Se la Volpe attacca mentre e' Nascosta, infligge +1d6 danni aggiuntivi."
+      },
+      {
+        "name": "Thorn Hide - Reaction",
+        "text": "Quando viene colpita in mischia, marca uno Stress per infliggere 2 danni fisici all'attaccante."
+      }
+    ]
+  },
+  {
+    "id": "sorcerer_of_the_unseen",
+    "name": "Sorcerer of the Unseen",
+    "campaign": "Base Tier 0",
+    "tier": "Tier 0 Leader",
+    "description": "Un incantatore minore che manipola le ombre.",
+    "maxHp": 4,
+    "stress": 3,
+    "difficulty": 11,
+    "attack_name": "Shadow Bolt",
+    "attack_mod": 1,
+    "damage_dice": "1d8 mag",
+    "thresholds": "6/12",
+    "features": [
+      {
+        "name": "Summon Shadows - Action",
+        "text": "Spendi una Paura per evocare 1d4 Inkblot in qualsiasi punto entro raggio Vicino."
+      },
+      {
+        "name": "Fade Away - Reaction",
+        "text": "Quando viene attaccato, marca uno Stress per diventare temporaneamente Nascosto, imponendo Svantaggio al tiro d'attacco."
+      }
+    ]
+  },
+  {
+    "id": "mossy_bear",
+    "name": "Mossy Bear",
+    "campaign": "Base Tier 0",
+    "tier": "Tier 0 Bruiser",
+    "description": "Un orso con la pelliccia ricoperta di muschio spesso e protettivo.",
+    "maxHp": 6,
+    "stress": 2,
+    "difficulty": 11,
+    "attack_name": "Artigli Pesanti",
+    "attack_mod": 2,
+    "damage_dice": "1d8+2 phy",
+    "thresholds": "8/16",
+    "features": [
+      {
+        "name": "Bear Hug - Action",
+        "text": "Marca uno Stress per tentare di afferrare un bersaglio. Se colpisce, il bersaglio e' Trattenuto invece di subire danni normali."
+      },
+      {
+        "name": "Thick Fur - Passive",
+        "text": "Riduce di 1 tutti i danni fisici subiti."
+      }
+    ]
+  }
+]

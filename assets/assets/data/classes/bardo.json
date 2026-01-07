@@ -1,0 +1,109 @@
+{
+  "id": "bardo",
+  "name": "Bardo",
+  "description": "In qualità di bardo, sapete come sciogliere la lingua alle persone, attirare l'attenzione, usare le parole e la musica per influenzare il mondo intorno a voi.",
+  "citation": "BARDO.pdf [cite: 301-302]",
+  "core_stats": {
+    "base_evasion": 10,
+    "primary_domains": ["grazia", "codice"],
+    "hope_resource_name": "Speranza",
+    "class_resource_name": "Dado A Raccolta"
+  },
+  "class_features": [
+    {
+      "id": "bard_rally",
+      "name": "Chiamata a Raccolta",
+      "type": "active",
+      "text": "Una volta per sessione descrivete come radunate il gruppo; poi date a voi stessi e a ciascuno dei vostri alleati un Dado A Raccolta (d6 al livello 1). Un PG può spendere il suo Dado A Raccolta per aggiungerlo a un tiro azione, reazione, danno oppure per cancellare Stress pari al risultato. I dadi non spesi svaniscono a fine sessione.",
+      "citation": "BARDO.pdf [cite: 274-283]"
+    }
+  ],
+  "subclasses": [
+    {
+      "id": "bard_wordsmith",
+      "name": "Paroliere",
+      "description": "Un maestro della lingua e della magia arcana, capace di tessere incantesimi attraverso le parole.",
+      "features": [
+        {
+          "name": "Linguaggio Arcano",
+          "text": "Quando lanci un incantesimo dal dominio Codice, puoi utilizzare la tua Presenza invece del tratto solitamente richiesto."
+        }
+      ]
+    },
+    {
+      "id": "bard_troubadour",
+      "name": "Trovatore",
+      "description": "Un musicista che porta speranza e guarigione, il cuore pulsante del gruppo.",
+      "features": [
+        {
+          "name": "Canzone Rigenerante",
+          "text": "Quando un alleato spende un Dado A Raccolta per cancellare Stress, può scegliere invece di recuperare un numero di Punti Ferita pari alla metà del risultato (minimo 1)."
+        }
+      ]
+    }
+  ],
+  "creation_guide": {
+    "recommended_traits": {
+      "agilita": 0,
+      "forza": -1,
+      "astuzia": 1,
+      "istinto": 0,
+      "presenza": 2,
+      "conoscenza": 1
+    },
+    "starting_equipment_choices": [
+      {
+        "id": "loadout_bardo_a",
+        "label": "Bardo Standard",
+        "items": [
+          {
+            "type": "weapon",
+            "name": "Stocco",
+            "stats": "Presenza, Mischia d8 fis, A una mano",
+            "passive_effect": "Rapido: Marca 1 Stress per attaccare un'altra creatura in portata."
+          },
+          {
+            "type": "weapon",
+            "name": "Stiletto",
+            "stats": "Astuzia, Mischia d8 fis, A una mano",
+            "passive_effect": "Accoppiato: +2 ai danni dell'arma primaria in mischia."
+          },
+          {
+            "type": "armor",
+            "name": "Gambesone",
+            "stats": "Soglie 5/11, Punteggio Base 3",
+            "passive_effect": "+1 all'Evasione (Flessibile)"
+          },
+          {
+            "type": "item",
+            "name": "Torcia, 16m di corda, provviste di base, una manciata d'oro"
+          }
+        ]
+      }
+    ],
+    "selectable_items_options": [
+      "Una pozione di salute minore",
+      "Una pozione di recupero minore",
+      "Un racconto romantico",
+      "Una lettera mai aperta"
+    ]
+  },
+  "available_domains_filter": {
+    "instruction": "Seleziona 2 carte dai domini Grazia e Codice.",
+    "valid_domains": ["grazia", "codice"],
+    "valid_level": 1
+  },
+  "narrative_prompts": {
+    "background_questions": [
+      "Chi nella vostra comunità vi ha insegnato ad avere tanta fiducia in voi stessi?",
+      "Siete stati innamorati una volta. Chi avete amato e come vi ha ferito?",
+      "Avete sempre ammirato un altro bardo. Chi è e perché lo idolatrate?"
+    ],
+    "bond_questions": [
+      "Cosa ti ha fatto capire che saremmo diventati così buoni amici?",
+      "Cosa faccio che ti infastidisce?",
+      "Perché mi afferri la mano di notte?"
+    ],
+    "citation": "BARDO.pdf [cite: 337-347]"
+  }
+}

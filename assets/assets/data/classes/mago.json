@@ -1,0 +1,119 @@
+{
+  "id": "mago",
+  "name": "Mago",
+  "description": "Divenendo un mago, avete preso familiarità con le forze arcane grazie a uno studio costante e approfondito dei grimori e degli altri strumenti della pratica magica.",
+  "citation": "MAGO.pdf [cite: 1123]",
+  "core_stats": {
+    "base_evasion": 11,
+    "primary_domains": ["codice", "splendore"],
+    "hope_resource_name": "Speranza",
+    "class_resource_name": "Segni Misteriosi"
+  },
+  "class_features": [
+    {
+      "id": "wizard_prestidigitation",
+      "name": "Prestidigitazione",
+      "type": "passive",
+      "text": "Potete eseguire effetti magici innocui e di piccola entità a volontà. Ad esempio, potete cambiare il colore di un abito, creare un odore, accendere una candela, far galleggiare un ninnolo, illuminare una stanza o riparare un piccolo oggetto.",
+      "citation": "MAGO.pdf [cite: 1100-1103]"
+    },
+    {
+      "id": "wizard_strange_patterns",
+      "name": "Segni Misteriosi",
+      "type": "active",
+      "text": "Scegliete un numero compreso tra 1 e 12. Quando tirate quel numero su un Dado Dualità, guadagnate una Speranza o rimuovete uno Stress. Potete cambiare il numero scelto quando fate un riposo lungo.",
+      "citation": "MAGO.pdf [cite: 1104-1106]"
+    },
+    {
+      "id": "wizard_not_this_time",
+      "name": "Non Questa Volta",
+      "type": "hope",
+      "text": "Spendete 3 Speranze per costringere un avversario fino a distanza Lontana a ripetere un tiro attacco o di danno.",
+      "citation": "MAGO.pdf [cite: 1085]"
+    }
+  ],
+  "subclasses": [
+    {
+      "id": "wizard_school_knowledge",
+      "name": "Scuola della Conoscenza",
+      "description": "Uno studioso che usa l'intelletto per superare ogni ostacolo e avere sempre la soluzione giusta.",
+      "features": [
+        {
+          "name": "Sempre Pronto",
+          "text": "Hai studiato ogni eventualità. Puoi spendere 1 Speranza per produrre dal tuo equipaggiamento un oggetto comune o un incantesimo minore utile alla situazione attuale."
+        }
+      ]
+    },
+    {
+      "id": "wizard_school_war",
+      "name": "Scuola di Guerra",
+      "description": "Un mago da battaglia specializzato nell'uso distruttivo della magia sul campo.",
+      "features": [
+        {
+          "name": "Magia da Combattimento",
+          "text": "Quando lanci un incantesimo che infligge danni, puoi aggiungere il tuo valore di Conoscenza al totale dei danni inflitti."
+        }
+      ]
+    }
+  ],
+  "creation_guide": {
+    "recommended_traits": {
+      "agilita": -1,
+      "forza": 0,
+      "astuzia": 0,
+      "istinto": 1,
+      "presenza": 1,
+      "conoscenza": 2
+    },
+    "starting_equipment_choices": [
+      {
+        "id": "loadout_mago_a",
+        "label": "Mago Standard",
+        "items": [
+          {
+            "type": "weapon",
+            "name": "Bordone",
+            "stats": "Conoscenza, Remota d6 mag, A due mani",
+            "passive_effect": "Potente: In caso di attacco riuscito, tirate un dado di danno aggiuntivo e scartate il risultato più basso.",
+            "citation": "MAGO.pdf [cite: 1136, 1139]"
+          },
+          {
+            "type": "armor",
+            "name": "Corazza di Cuoio",
+            "stats": "Soglie 6/13, Punteggio Base 3",
+            "citation": "MAGO.pdf [cite: 1147]"
+          },
+          {
+            "type": "item",
+            "name": "Torcia, 16m di corda, provviste di base, una manciata d'oro",
+            "citation": "MAGO.pdf [cite: 1131, 1134]"
+          }
+        ]
+      }
+    ],
+    "selectable_items_options": [
+      "Una pozione di salute minore",
+      "Una pozione di recupero minore",
+      "Un libro che state cercando di tradurre",
+      "Un piccolo e innocuo cucciolo elementale"
+    ]
+  },
+  "available_domains_filter": {
+    "instruction": "Seleziona 2 carte dai domini Codice e Splendore.",
+    "valid_domains": ["codice", "splendore"],
+    "valid_level": 1
+  },
+  "narrative_prompts": {
+    "background_questions": [
+      "Per quali responsabilità la comunità contava su di voi? In che modo li avete delusi?",
+      "Avete trascorso la vita alla ricerca di un libro o di un oggetto di grande significato. Di cosa si tratta e perché è così importante?"
+    ],
+    "bond_questions": [
+      "Quale favore ti ho chiesto che non sei sicuro di poter soddisfare?",
+      "Quale strano hobby o strano interesse condividiamo?",
+      "Avete un potente rivale. Chi è e perché siete così determinati a sconfiggerlo?",
+      "Quale segreto hai affidato solo a me?"
+    ],
+    "citation": "MAGO.pdf [cite: 1155, 1162, 1161, 1164, 1165, 1167]"
+  }
+}

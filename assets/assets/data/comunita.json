@@ -1,0 +1,101 @@
+[
+  {
+    "id": "highborne",
+    "name": "Nobile",
+    "description": "Sei cresciuto tra lusso e prestigio, abituato ai piani alti della società.",
+    "features": [
+      {
+        "name": "Privilegio",
+        "text": "Hai Vantaggio ai tiri per trattare con i nobili, negoziare prezzi o sfruttare la tua reputazione."
+      }
+    ]
+  },
+  {
+    "id": "loreborne",
+    "name": "Erudita",
+    "description": "Provieni da una società che valorizza la conoscenza, la storia e lo studio.",
+    "features": [
+      {
+        "name": "Acculturato",
+        "text": "Hai Vantaggio ai tiri che riguardano la storia, la cultura o la politica di persone o luoghi importanti."
+      }
+    ]
+  },
+  {
+    "id": "orderborne",
+    "name": "Dell'Ordine",
+    "description": "Sei cresciuto in una comunità rigida, focalizzata sulla disciplina, la fede o la legge.",
+    "features": [
+      {
+        "name": "Disciplina",
+        "text": "Hai Vantaggio ai tiri per resistere alla paura, all'intimidazione o per mantenere la calma."
+      }
+    ]
+  },
+  {
+    "id": "ridgeborne",
+    "name": "Della Cresta",
+    "description": "Hai chiamato casa le vette rocciose e le scogliere, imparando a non cadere mai.",
+    "features": [
+      {
+        "name": "Passo Sicuro",
+        "text": "Hai Vantaggio ai tiri per attraversare sporgenze pericolose, navigare ambienti ostili e usare conoscenze di sopravvivenza."
+      }
+    ]
+  },
+  {
+    "id": "seaborne",
+    "name": "Del Mare",
+    "description": "Hai vissuto su o vicino a grandi specchi d'acqua, adattandoti al flusso delle maree.",
+    "features": [
+      {
+        "name": "Gente di Mare",
+        "text": "Hai Vantaggio ai tiri per nuotare, navigare o interagire con creature acquatiche."
+      }
+    ]
+  },
+  {
+    "id": "slyborne",
+    "name": "Scaltra",
+    "description": "Sei cresciuto nei bassifondi o in luoghi dove l'astuzia è l'unica moneta che conta.",
+    "features": [
+      {
+        "name": "Esperto di Strada",
+        "text": "Hai Vantaggio ai tiri per trovare contatti criminali, nasconderti nella folla o individuare pericoli urbani."
+      }
+    ]
+  },
+  {
+    "id": "underborne",
+    "name": "Sotterranea",
+    "description": "La tua casa era nel sottosuolo, abituandoti al buio e agli spazi angusti.",
+    "features": [
+      {
+        "name": "Vita nell'Ombra",
+        "text": "Quando sei in condizioni di scarsa illuminazione, hai Vantaggio ai tiri per nasconderti, investigare o percepire dettagli."
+      }
+    ]
+  },
+  {
+    "id": "wanderborne",
+    "name": "Nomade",
+    "description": "Non hai mai avuto una casa fissa, viaggiando costantemente e raccogliendo cianfrusaglie.",
+    "features": [
+      {
+        "name": "Zaino del Nomade",
+        "text": "Una volta per sessione, puoi spendere una Speranza per estrarre dal tuo zaino un oggetto comune utile alla situazione attuale."
+      }
+    ]
+  },
+  {
+    "id": "wildborne",
+    "name": "Selvaggia",
+    "description": "Hai vissuto nelle profondità delle foreste o delle giungle, in armonia con la natura.",
+    "features": [
+      {
+        "name": "Passo Leggero",
+        "text": "Il tuo movimento è naturalmente silenzioso. Puoi muoverti attraverso terreni naturali difficili senza penalità."
+      }
+    ]
+  }
+]

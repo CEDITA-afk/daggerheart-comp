@@ -1,0 +1,185 @@
+{
+  "id": "druido",
+  "name": "Druido",
+  "description": "Il druido è una forza della natura, la cui missione consiste nel preservare l'equilibrio tra la vita e la morte, incanalando il potere delle terre selvagge.",
+  "citation": "DRUIDO.pdf",
+  "core_stats": {
+    "base_evasion": 10,
+    "primary_domains": ["saggio", "arcano"],
+    "hope_resource_name": "Speranza",
+    "class_resource_name": "Forma Bestiale"
+  },
+  "class_features": [
+    {
+      "id": "druid_beastform",
+      "name": "Forma Bestiale",
+      "type": "active",
+      "text": "Marcate uno Stress per trasformarvi magicamente in una creatura del vostro rango o inferiore dall'elenco delle Forme Bestiali. Ottenete i privilegi della bestia, aggiungete il suo bonus di Evasione alla vostra e usate il tratto specificato per gli attacchi. L'armatura si fonde (usate le caselle normalmente). Termina se subite l'ultimo Punto Ferita."
+    },
+    {
+      "id": "druid_evolution",
+      "name": "Evoluzione",
+      "type": "hope",
+      "text": "Spendete 3 Speranze per trasformarvi in Forma Bestiale senza marcare uno Stress. Quando lo fate aumentate un tratto di +1 finché non annullate la Forma Bestiale."
+    },
+    {
+      "id": "druid_natures_touch",
+      "name": "Tocco della Natura",
+      "type": "passive",
+      "text": "Potete eseguire a volontà effetti innocui e minori che coinvolgono la natura, come far crescere un fiore, evocare vento o accendere un fuoco."
+    }
+  ],
+  "subclasses": [
+    {
+      "id": "druid_warden_elements",
+      "name": "Custode degli Elementi",
+      "description": "Un druido che incanala la furia della tempesta, del fuoco e della terra.",
+      "features": [
+        {
+          "name": "Potere Primordiale",
+          "text": "Quando sei in Forma Bestiale, i tuoi attacchi possono infliggere danni magici invece che fisici. Se lo fai, aggiungi +2 ai danni."
+        }
+      ]
+    },
+    {
+      "id": "druid_warden_renewal",
+      "name": "Custode del Rinnovamento",
+      "description": "Un protettore della vita che usa la natura per guarire e proteggere.",
+      "features": [
+        {
+          "name": "Fioritura Vitale",
+          "text": "Quando termini la tua Forma Bestiale volontariamente (non per aver perso tutti i PF), tu o un alleato entro distanza Vicina potete recuperare 1d4 Punti Ferita."
+        }
+      ]
+    }
+  ],
+  "creation_guide": {
+    "recommended_traits": {
+      "agilita": 1,
+      "forza": 0,
+      "astuzia": 1,
+      "istinto": 2,
+      "presenza": -1,
+      "conoscenza": 0
+    },
+    "starting_equipment_choices": [
+      {
+        "id": "loadout_druido_a",
+        "label": "Druido Standard",
+        "items": [
+          {
+            "type": "weapon",
+            "name": "Verga",
+            "stats": "Istinto, Ravvicinata d8+1 mag, A una mano"
+          },
+          {
+            "type": "weapon",
+            "name": "Scudo Rotella",
+            "stats": "Forza, Mischia d4 fis, A una mano",
+            "passive_effect": "Protettore: +1 al Punteggio di Armatura"
+          },
+          {
+            "type": "armor",
+            "name": "Corazza di Cuoio",
+            "stats": "Soglie 6/13, Punteggio Base 3"
+          },
+          {
+            "type": "item",
+            "name": "Torcia, 16m di corda, provviste di base, una manciata d'oro"
+          }
+        ]
+      }
+    ],
+    "selectable_items_options": [
+      "Una pozione di salute minore",
+      "Una pozione di recupero minore",
+      "Una borsa piena di pietruzze e ossicini",
+      "Uno strano pendente scovato nella sporcizia"
+    ]
+  },
+  "beast_forms": [
+    {
+      "tier": 1,
+      "name": "Agile Scout",
+      "examples": "Volpe, Topo, Donnola",
+      "stats": "Agilità +1 | Evasione +2 | Mischia Agilità d4 fis",
+      "traits": ["ingannare", "localizzare", "furtività"],
+      "features": [
+        { "name": "Agile", "text": "Il tuo movimento è silenzioso e puoi spendere una Speranza per muoverti fino a distanza Lontana senza tirare." },
+        { "name": "Fragile", "text": "Quando subisci danni Maggiori o Severi, esci dalla Forma Bestiale." }
+      ]
+    },
+    {
+      "tier": 1,
+      "name": "Household Friend",
+      "examples": "Gatto, Cane, Coniglio",
+      "stats": "Istinto +1 | Evasione +2 | Mischia Istinto d6 fis",
+      "traits": ["scalare", "localizzare", "proteggere"],
+      "features": [
+        { "name": "Compagno", "text": "Quando aiuti un alleato, puoi tirare un d8 come dado vantaggio." },
+        { "name": "Fragile", "text": "Quando subisci danni Maggiori o Severi, esci dalla Forma Bestiale." }
+      ]
+    },
+    {
+      "tier": 1,
+      "name": "Nimble Grazer",
+      "examples": "Cervo, Gazzella, Capra",
+      "stats": "Agilità +1 | Evasione +3 | Mischia Agilità d6 fis",
+      "traits": ["saltare", "correre", "furtività"],
+      "features": [
+        { "name": "Preda elusiva", "text": "Quando un tiro per colpire contro di te avrebbe successo, puoi segnare uno Stress e tirare un d4. Somma il risultato alla tua Evasione contro questo attacco." },
+        { "name": "Fragile", "text": "Quando subisci danni Maggiori o Severi, esci dalla Forma Bestiale." }
+      ]
+    },
+    {
+      "tier": 1,
+      "name": "Pack Predator",
+      "examples": "Coyote, Iena, Lupo",
+      "stats": "Forza +2 | Evasione +1 | Mischia Forza d8+2 fis",
+      "traits": ["attaccare", "correre", "localizzare"],
+      "features": [
+        { "name": "Colpo Zoppicante", "text": "Quando attacchi con successo un bersaglio entro il raggio di Mischia, puoi segnare uno Stress per renderlo temporaneamente Vulnerabile." },
+        { "name": "Caccia in Branco", "text": "Quando attacchi con successo lo stesso bersaglio di un alleato che agisce immediatamente prima di te, aggiungi un d8 al tuo tiro per i danni." }
+      ]
+    },
+    {
+      "tier": 1,
+      "name": "Aquatic Scout",
+      "examples": "Anguilla, Pesce, Polpo",
+      "stats": "Agilità +1 | Evasione +2 | Mischia Agilità d4 fis",
+      "traits": ["nuotare", "furtività", "navigare"],
+      "features": [
+        { "name": "Acquatico", "text": "Puoi respirare e muoverti naturalmente sott'acqua." },
+        { "name": "Fragile", "text": "Quando subisci danni Maggiori o Severi, esci dalla Forma Bestiale." }
+      ]
+    },
+    {
+      "tier": 1,
+      "name": "Stalking Arachnid",
+      "examples": "Tarantola, Ragno Lupo",
+      "stats": "Finezza +1 | Evasione +2 | Mischia Finezza d6+1 fis",
+      "traits": ["attaccare", "scalare", "furtività"],
+      "features": [
+        { "name": "Morso Velenoso", "text": "Quando attacchi con successo un bersaglio entro il raggio di Mischia, il bersaglio diventa temporaneamente Avvelenato. Una creatura Avvelenata subisce 1d10 danni fisici diretti ogni volta che agisce." },
+        { "name": "Lanciaragnatele", "text": "Puoi creare una ragnatela resistente. Puoi Trattenere temporaneamente un bersaglio entro il raggio Vicino superando un Tiro di Finezza contro di lui." }
+      ]
+    }
+  ],
+  "available_domains_filter": {
+    "instruction": "Seleziona 2 carte dai domini Saggio e Arcano.",
+    "valid_domains": ["saggio", "arcano"],
+    "valid_level": 1
+  },
+  "narrative_prompts": {
+    "background_questions": [
+      "Perché la comunità in cui siete cresciuti era così legata alla natura e alle sue creature?",
+      "Quale è stato il primo animale selvatico con cui avete stretto amicizia? Perché il vostro legame è finito?"
+    ],
+    "bond_questions": [
+      "Cosa mi hai confidato che mi fa correre ogni volta dei rischi per te?",
+      "Quale animale ti ho detto che mi ricordi?",
+      "Chi ha cercato di darvi la caccia? Cosa vogliono da voi?",
+      "Quale soprannome affettuoso mi hai dato?"
+    ]
+  }
+}

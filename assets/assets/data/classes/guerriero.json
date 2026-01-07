@@ -1,0 +1,109 @@
+{
+  "id": "guerriero",
+  "name": "Guerriero",
+  "description": "Vi lanciate nel cuore della battaglia con trasporto e senza esitazione o cautela, sicuri di poter abbattere qualsiasi nemico si metta sul vostro cammino.",
+  "citation": "GUERRIERO.pdf [cite: 100]",
+  "core_stats": {
+    "base_evasion": 11,
+    "primary_domains": ["lame", "ossa"],
+    "hope_resource_name": "Speranza",
+    "class_resource_name": null
+  },
+  "class_features": [
+    {
+      "id": "warrior_opportunity_attack",
+      "name": "Attacco di Opportunità",
+      "type": "reaction",
+      "text": "Se un avversario entro distanza di Mischia tenta di uscirne, effettuate un tiro di reazione usando un tratto a vostra scelta contro la sua Difficoltà. Scegliete un effetto in caso di successo o due in caso di successo critico:\n• Non può spostarsi da dove si trova.\n• Subisce un danno pari al danno della vostra arma primaria.\n• Vi muovete con loro.",
+      "citation": "GUERRIERO.pdf [cite: 77-81]"
+    },
+    {
+      "id": "warrior_battle_hardened",
+      "name": "Addestrato al Combattimento",
+      "type": "passive",
+      "text": "Ignorate l'impugnatura quando equipaggiate le vostre armi. Quando infliggete danno fisico, ottenete un bonus al tiro per i danni pari al vostro livello.",
+      "citation": "GUERRIERO.pdf [cite: 82-83]"
+    }
+  ],
+  "subclasses": [
+    {
+      "id": "warrior_slayer",
+      "name": "Abbattitore",
+      "description": "Una forza distruttiva che si concentra sull'eliminare i nemici feriti con brutalità.",
+      "features": [
+        {
+          "name": "Furia",
+          "text": "Quando attacchi un nemico che ha già subito danni (non è al massimo dei PF), aggiungi +1d6 al danno fisico."
+        }
+      ]
+    },
+    {
+      "id": "warrior_strategist",
+      "name": "Stratega",
+      "description": "Un comandante tattico che controlla il campo di battaglia e supporta gli alleati.",
+      "features": [
+        {
+          "name": "Piano di Battaglia",
+          "text": "Puoi spendere 1 Speranza per concedere Vantaggio al prossimo tiro di un alleato entro distanza di Comunicazione."
+        }
+      ]
+    }
+  ],
+  "creation_guide": {
+    "recommended_traits": {
+      "agilita": 2,
+      "forza": 1,
+      "astuzia": 0,
+      "istinto": 1,
+      "presenza": -1,
+      "conoscenza": 0
+    },
+    "starting_equipment_choices": [
+      {
+        "id": "loadout_guerriero_a",
+        "label": "Guerriero Standard",
+        "items": [
+          {
+            "type": "weapon",
+            "name": "Spada Lunga",
+            "stats": "Agilità, Mischia d8+3 fis, A due mani"
+          },
+          {
+            "type": "armor",
+            "name": "Cotta di Maglia",
+            "stats": "Soglie 7/15, Punteggio Base 4",
+            "passive_effect": "-1 all'Evasione (Pesante)"
+          },
+          {
+            "type": "item",
+            "name": "Torcia, 16m di corda, provviste di base, una manciata d'oro"
+          }
+        ]
+      }
+    ],
+    "selectable_items_options": [
+      "Una pozione di salute minore",
+      "Una pozione di recupero minore",
+      "Il ritratto di chi amate",
+      "Una cote per affilare"
+    ]
+  },
+  "available_domains_filter": {
+    "instruction": "Seleziona 2 carte dai domini Lame e Ossa.",
+    "valid_domains": ["lame", "ossa"],
+    "valid_level": 1
+  },
+  "narrative_prompts": {
+    "background_questions": [
+      "Chi vi ha insegnato a combattere e perché è rimasto indietro quando avete lasciato la vostra casa?",
+      "Qualcuno vi ha sconfitto in battaglia anni fa e vi ha lasciati a morire. Chi era e come vi ha tradito?",
+      "Quale luogo leggendario avete sempre voluto visitare e perché è così speciale?"
+    ],
+    "bond_questions": [
+      "Ci conoscevamo da molto prima che questo gruppo si riunisse. Come?",
+      "In quale compito o attività mi aiuti fuori dal campo di battaglia?",
+      "Quale paura ti sto aiutando a superare?"
+    ],
+    "citation": "GUERRIERO.pdf "
+  }
+}

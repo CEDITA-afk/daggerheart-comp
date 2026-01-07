@@ -1,0 +1,111 @@
+{
+  "id": "ranger",
+  "name": "Ranger",
+  "description": "Gli occhi acuti e la sicurezza nei movimenti rendono i ranger indispensabili per seguire le tracce del nemico o viaggiare nelle terre selvagge.",
+  "citation": "RANGER.pdf [cite: 1288]",
+  "core_stats": {
+    "base_evasion": 12,
+    "primary_domains": ["ossa", "saggio"],
+    "hope_resource_name": "Speranza",
+    "class_resource_name": "Focus del Ranger"
+  },
+  "class_features": [
+    {
+      "id": "ranger_focus",
+      "name": "Focus del Ranger",
+      "type": "active",
+      "text": "Spendete una Speranza ed effettuate un attacco. Se ha successo, infliggete i danni normali e il bersaglio diventa il vostro Focus. Sapete esattamente in che direzione si trova e quando gli infliggete danno, deve marcare uno Stress. Se fallite l'attacco contro di esso, potete terminare l'effetto per rilanciare i Dadi Dualità.",
+      "citation": "RANGER.pdf "
+    },
+    {
+      "id": "ranger_hold_them_back",
+      "name": "Tienili a Bada",
+      "type": "hope",
+      "text": "Quando riuscite a portare a segno un attacco con un'arma, spendete 3 Speranze per usare lo stesso tiro contro altri due avversari alla stessa distanza dell'attacco riuscito.",
+      "citation": "RANGER.pdf "
+    }
+  ],
+  "subclasses": [
+    {
+      "id": "ranger_beastbound",
+      "name": "Legame Bestiale",
+      "description": "Uniti a un compagno animale fedele, combattete come un'unica entità.",
+      "features": [
+        {
+          "name": "Compagno Fedele",
+          "text": "Hai un compagno animale (vedi scheda Compagno). Effettua un Tiro Incantesimo (Istinto) per ordinargli di agire. Se spendi Speranza, puoi aggiungere una sua Esperienza al tiro. Il compagno inizia con d6 di danno.",
+          "citation": "RANGER - COMPAGNO.pdf [cite: 1244-1246, 1236]"
+        }
+      ]
+    },
+    {
+      "id": "ranger_wayfinder",
+      "name": "Esploratore",
+      "description": "Un maestro della sopravvivenza, capace di adattarsi a qualsiasi ambiente e trovare risorse ovunque.",
+      "features": [
+        {
+          "name": "Sopravvissuto",
+          "text": "Sei un esperto delle terre selvagge. Puoi spendere 1 Speranza per trovare risorse (cibo, acqua, riparo) anche negli ambienti più ostili o per individuare tracce invisibili agli altri."
+        }
+      ]
+    }
+  ],
+  "creation_guide": {
+    "recommended_traits": {
+      "agilita": 2,
+      "forza": 0,
+      "astuzia": 1,
+      "istinto": 1,
+      "presenza": -1,
+      "conoscenza": 0
+    },
+    "starting_equipment_choices": [
+      {
+        "id": "loadout_ranger_a",
+        "label": "Ranger Standard",
+        "items": [
+          {
+            "type": "weapon",
+            "name": "Arco Corto",
+            "stats": "Agilità, Lontana d6+3 fis, A due mani",
+            "citation": "RANGER.pdf"
+          },
+          {
+            "type": "armor",
+            "name": "Corazza di Cuoio",
+            "stats": "Soglie 6/13, Punteggio Base 3",
+            "citation": "RANGER.pdf"
+          },
+          {
+            "type": "item",
+            "name": "Torcia, 16m di corda, provviste base, manciata d'oro",
+            "citation": "RANGER.pdf"
+          }
+        ]
+      }
+    ],
+    "selectable_items_options": [
+      "Una pozione di salute minore",
+      "Una pozione di recupero minore",
+      "Un trofeo della vostra prima preda",
+      "Una bussola apparentemente rotta"
+    ]
+  },
+  "available_domains_filter": {
+    "instruction": "Seleziona 2 carte dai domini Ossa e Saggio.",
+    "valid_domains": ["ossa", "saggio"],
+    "valid_level": 1
+  },
+  "narrative_prompts": {
+    "background_questions": [
+      "Una terribile creatura ha ferito la vostra comunità e avete giurato di darle la caccia. Che creatura è?",
+      "La prima creatura che avete abbattuto ha quasi ucciso anche voi. Che cosa è stato?"
+    ],
+    "bond_questions": [
+      "Quale competizione amichevole c'è fra noi?",
+      "Perché ti comporti in modo diverso quando siamo soli?",
+      "Quale minaccia mi hai chiesto di tenere d'occhio e perché sei preoccupato?"
+    ],
+    "citation": "RANGER.pdf"
+  }
+}
