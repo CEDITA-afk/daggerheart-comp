@@ -1,0 +1,104 @@
+{
+  "id": "stregone",
+  "name": "Stregone",
+  "description": "Il vostro potere è innato, una magia selvaggia e caotica che scorre nelle vostre vene.",
+  "citation": "STREGONE.pdf",
+  "core_stats": {
+    "base_evasion": 10,
+    "primary_domains": ["arcano", "mezzanotte"],
+    "hope_resource_name": "Speranza",
+    "class_resource_name": "Incanalare"
+  },
+  "class_features": [
+    {
+      "id": "sorcerer_channeling",
+      "name": "Incanalare",
+      "type": "active",
+      "text": "Potete incanalare la vostra magia per potenziare gli incantesimi. Quando lanciate un incantesimo o usate un'abilità magica, potete segnare X Stress per aggiungere +X al tiro di attacco o di danno."
+    },
+    {
+      "id": "sorcerer_volatile_magic",
+      "name": "Magia Volatile",
+      "type": "hope",
+      "text": "Spendete 3 Speranze per rilanciare un numero qualsiasi di dadi danno in un attacco che infligge danni magici."
+    }
+  ],
+  "subclasses": [
+    {
+      "id": "sorcerer_elemental",
+      "name": "Stirpe Elementale",
+      "description": "Il tuo potere deriva dagli elementi primordiali. Sei un condotto vivente di fuoco, ghiaccio o tempesta.",
+      "features": [
+        {
+          "name": "Affinità Elementale",
+          "text": "Scegli un elemento (Fuoco, Ghiaccio, Fulmine). Ottieni Resistenza ai danni di quel tipo. Inoltre, quando spendi Speranza per lanciare un incantesimo di quel tipo, aggiungi +2 ai danni."
+        }
+      ]
+    },
+    {
+      "id": "sorcerer_chaos",
+      "name": "Stirpe del Caos",
+      "description": "La magia dentro di te è imprevedibile e indomabile, capace di piegare la probabilità.",
+      "features": [
+        {
+          "name": "Fortuna del Caos",
+          "text": "Quando ottieni un fallimento con Paura su un tiro di incantesimo, puoi marcare 1 Stress per ritirare uno dei dadi (devi tenere il nuovo risultato)."
+        }
+      ]
+    }
+  ],
+  "creation_guide": {
+    "recommended_traits": {
+      "agilita": 1,
+      "forza": -1,
+      "astuzia": 0,
+      "istinto": 1,
+      "presenza": 2,
+      "conoscenza": 0
+    },
+    "starting_equipment_choices": [
+      {
+        "id": "loadout_stregone_a",
+        "label": "Stregone Standard",
+        "items": [
+          {
+            "type": "weapon",
+            "name": "Scarica di Energia",
+            "stats": "Presenza, Lontana d8+2 mag, A due mani"
+          },
+          {
+            "type": "armor",
+            "name": "Vesti da Viaggio",
+            "stats": "Soglie 4/10, Punteggio Base 2",
+            "passive_effect": ""
+          },
+          {
+            "type": "item",
+            "name": "Cristallo focale, provviste di base"
+          }
+        ]
+      }
+    ],
+    "selectable_items_options": [
+      "Una pozione di mana minore",
+      "Un amuleto vibrante",
+      "Strani componenti arcani"
+    ]
+  },
+  "available_domains_filter": {
+    "instruction": "Seleziona 2 carte dai domini Arcano e Mezzanotte.",
+    "valid_domains": ["arcano", "mezzanotte"],
+    "valid_level": 1
+  },
+  "narrative_prompts": {
+    "background_questions": [
+      "Qual è l'origine della tua magia innata? Una linea di sangue, un evento o una maledizione?",
+      "Chi teme il tuo potere e perché?"
+    ],
+    "bond_questions": [
+      "Chi mi ha aiutato a controllare la mia magia quando stavo per perdere il controllo?",
+      "Di chi mi fido abbastanza da rivelare la vera natura del mio potere?",
+      "Quale disastro magico abbiamo causato insieme in passato?"
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "id": "consacrato",
+  "name": "Consacrato",
+  "description": "In qualità di consacrato, vi siete votati a una divinità che vi guida nell'incanalare un potere antico e benedetto per proteggere i vostri compagni.",
+  "citation": "CONSACRATO.pdf [cite: 510-511]",
+  "core_stats": {
+    "base_evasion": 9,
+    "primary_domains": ["splendore", "valore"],
+    "hope_resource_name": "Speranza",
+    "class_resource_name": "Dado Preghiera"
+  },
+  "class_features": [
+    {
+      "id": "seraph_prayer_die",
+      "name": "Dado Preghiera",
+      "type": "active",
+      "text": "All'inizio di ogni sessione, tirate un numero di d4 pari al tratto da Incantatore della vostra sottoclasse. Questi sono i vostri Dadi Preghiera. Potete spenderli per aiutare voi stessi o un alleato entro distanza Lontana: riducete i danni in arrivo del valore del dado, aggiungete il risultato a un tiro dopo averlo effettuato, o guadagnate Speranza pari al risultato.",
+      "citation": "CONSACRATO.pdf [cite: 488-493]"
+    },
+    {
+      "id": "seraph_protect_life",
+      "name": "Proteggere la Vita",
+      "type": "hope",
+      "text": "Spendete 3 Speranze per annullare la perdita di un Punto Ferita di un alleato entro distanza Ravvicinata.",
+      "citation": "CONSACRATO.pdf [cite: 473]"
+    }
+  ],
+  "subclasses": [
+    {
+      "id": "seraph_winged_sentinel",
+      "name": "Sentinella Alata",
+      "description": "Un protettore celeste capace di solcare i cieli per vegliare sui propri alleati.",
+      "features": [
+        {
+          "name": "Ali della Fede",
+          "text": "Le tue ali sono una manifestazione del tuo potere divino. Puoi marcare 1 Stress per volare per la durata di una scena. Il tuo tratto da Incantatore per i Dadi Preghiera è la Forza."
+        }
+      ]
+    },
+    {
+      "id": "seraph_divine_wielder",
+      "name": "Portatore Divino",
+      "description": "Un condottiero sacro che infonde il potere della sua divinità nelle armi per punire i malvagi.",
+      "features": [
+        {
+          "name": "Arma Consacrata",
+          "text": "Puoi canalizzare la magia attraverso la tua arma. Quando attacchi, puoi spendere un Dado Preghiera per aggiungere il risultato ai danni. Il tuo tratto da Incantatore per i Dadi Preghiera è la Presenza."
+        }
+      ]
+    }
+  ],
+  "creation_guide": {
+    "recommended_traits": {
+      "agilita": 0,
+      "forza": 2,
+      "astuzia": 0,
+      "istinto": 1,
+      "presenza": 1,
+      "conoscenza": -1
+    },
+    "starting_equipment_choices": [
+      {
+        "id": "loadout_consacrato_a",
+        "label": "Consacrato Standard",
+        "items": [
+          {
+            "type": "weapon",
+            "name": "Ascia Consacrata",
+            "stats": "Forza, Mischia d8+1 mag, A una mano",
+            "citation": "CONSACRATO.pdf [cite: 522]"
+          },
+          {
+            "type": "weapon",
+            "name": "Scudo Rotella",
+            "stats": "Forza, Mischia d4 fis, A una mano",
+            "passive_effect": "Protettore: +1 al Punteggio di Armatura",
+            "citation": "CONSACRATO.pdf [cite: 528, 531]"
+          },
+          {
+            "type": "armor",
+            "name": "Cotta di Maglia",
+            "stats": "Soglie 7/15, Punteggio Base 4",
+            "passive_effect": "-1 all'Evasione (Pesante)",
+            "citation": "CONSACRATO.pdf [cite: 538]"
+          },
+          {
+            "type": "item",
+            "name": "Torcia, 16m di corda, provviste di base, una manciata d'oro",
+            "citation": "CONSACRATO.pdf [cite: 518, 521]"
+          }
+        ]
+      }
+    ],
+    "selectable_items_options": [
+      "Una pozione di salute minore",
+      "Una pozione di recupero minore",
+      "Una raccolta di offerte",
+      "Il simbolo sacro della vostra divinità"
+    ]
+  },
+  "available_domains_filter": {
+    "instruction": "Seleziona 2 carte dai domini Splendore e Valore.",
+    "valid_domains": ["splendore", "valore"],
+    "valid_level": 1
+  },
+  "narrative_prompts": {
+    "background_questions": [
+      "A quale divinità vi siete votati?",
+      "Quale incredibile miracolo ha compiuto per voi in un momento di disperazione?"
+    ],
+    "bond_questions": [
+      "Quale promessa mi hai fatto accettare, se tu dovessi morire sul campo di battaglia?",
+      "Come è cambiato il vostro aspetto dopo il vostro giuramento sacro?",
+      "Perché mi fai tante domande sulla mia divinità?",
+      "In quale modo strano o unico comunicate con la vostra divinità?",
+      "Mi hai detto di proteggere un membro del nostro gruppo più di tutti gli altri, anche di te stesso. Chi è e perché me lo hai chiesto?"
+    ],
+    "citation": "CONSACRATO.pdf [cite: 543-554]"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "id": "guardiano",
+  "name": "Guardiano",
+  "description": "Tutti i guardiani corrono incontro il pericolo per proteggere il gruppo a cui appartengono, custodi instancabili di coloro che, senza la loro protezione, potrebbero non sopravvivere alla battaglia.",
+  "citation": "GUARDIANO.pdf [cite: 923]",
+  "core_stats": {
+    "base_evasion": 9,
+    "primary_domains": ["valore", "lame"],
+    "hope_resource_name": "Speranza",
+    "class_resource_name": "Dado Inarrestabile"
+  },
+  "class_features": [
+    {
+      "id": "guardian_unstoppable",
+      "name": "Inarrestabile",
+      "type": "active",
+      "text": "Una volta per riposo lungo potete diventare Inarrestabili. Guadagnate un Dado Inarrestabile (d4 al livello 1). Aumentate il dado di uno step (es. d4->d6) quando infliggete 1+ danni. Quando siete Inarrestabili:\n• Riducete la gravità dei danni fisici di una soglia.\n• Aggiungete il valore attuale del Dado Inarrestabile al tiro per i danni.\n• Non potete essere Trattenuti o Vulnerabili.\nL'effetto termina se il dado supera il massimo o a fine scena.",
+      "citation": "GUARDIANO.pdf [cite: 889-915]"
+    },
+    {
+      "id": "guardian_bulwark",
+      "name": "Baluardo in Prima Linea",
+      "type": "hope",
+      "text": "Spendete 3 Speranze per cancellare 2 Caselle Armatura.",
+      "citation": "GUARDIANO.pdf [cite: 880]"
+    }
+  ],
+  "subclasses": [
+    {
+      "id": "guardian_stalwart",
+      "name": "Difensore",
+      "description": "Una fortezza vivente, specializzata nell'assorbire colpi destinati agli altri.",
+      "features": [
+        {
+          "name": "Barriera Vivente",
+          "text": "Quando un alleato entro Distanza Ravvicinata subisce danno fisico, puoi spendere 1 Armatura per ridurre quel danno (utilizzando il tuo Punteggio Armatura) come se avessero colpito te."
+        }
+      ]
+    },
+    {
+      "id": "guardian_vengeance",
+      "name": "Vendicatore",
+      "description": "Un guerriero punitivo che restituisce ogni colpo subito con ferocia.",
+      "features": [
+        {
+          "name": "Rappresaglia",
+          "text": "Quando subisci danno da un nemico entro portata di Mischia, puoi marcare 1 Stress per infliggere immediatamente al nemico un danno pari alla tua Competenza."
+        }
+      ]
+    }
+  ],
+  "creation_guide": {
+    "recommended_traits": {
+      "agilita": 1,
+      "forza": 2,
+      "astuzia": -1,
+      "istinto": 0,
+      "presenza": 1,
+      "conoscenza": 0
+    },
+    "starting_equipment_choices": [
+      {
+        "id": "loadout_guardiano_a",
+        "label": "Guardiano Standard",
+        "items": [
+          {
+            "type": "weapon",
+            "name": "Ascia da Battaglia",
+            "stats": "Forza, Mischia d10+3 fis, A due mani",
+            "citation": "GUARDIANO.pdf [cite: 933]"
+          },
+          {
+            "type": "armor",
+            "name": "Cotta di Maglia",
+            "stats": "Soglie 7/15, Punteggio Base 4",
+            "passive_effect": "Pesante: -1 all'Evasione",
+            "citation": "GUARDIANO.pdf [cite: 941-942]"
+          },
+          {
+            "type": "item",
+            "name": "Torcia, 16m di corda, provviste di base, una manciata d'oro",
+            "citation": "GUARDIANO.pdf [cite: 931, 934]"
+          }
+        ]
+      }
+    ],
+    "selectable_items_options": [
+      "Una pozione di salute minore",
+      "Una pozione di recupero minore",
+      "Un ricordo del vostro mentore",
+      "Una chiave misteriosa"
+    ]
+  },
+  "available_domains_filter": {
+    "instruction": "Seleziona 2 carte dai domini Valore e Lame.",
+    "valid_domains": ["valore", "lame"],
+    "valid_level": 1
+  },
+  "narrative_prompts": {
+    "background_questions": [
+      "Chi della vostra comunità non siete riusciti a proteggere e perché pensate ancora a loro?",
+      "Siete stati incaricati di proteggere qualcosa di importante e di consegnarlo in un luogo pericoloso. Che cos'è e dove dovete portarlo?",
+      "Considerate un aspetto di voi stessi come una debolezza. Di cosa si tratta e come vi ha influenzato?"
+    ],
+    "bond_questions": [
+      "Come ti ho salvato la vita la prima volta che ci siamo incontrati?",
+      "Quale piccolo regalo mi hai fatto e hai notato che lo porto sempre con me?",
+      "Quale bugia mi hai raccontato su di te, a cui ho assolutamente creduto?"
+    ],
+    "citation": "GUARDIANO.pdf [cite: 945-963]"
+  }
+}

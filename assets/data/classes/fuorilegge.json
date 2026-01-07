@@ -1,0 +1,126 @@
+{
+  "id": "fuorilegge",
+  "name": "Fuorilegge",
+  "description": "I fuorilegge sanno servirsi in combattimento tanto delle armi che della loro astuzia, prediligendo movimenti rapidi e silenziosi.",
+  "citation": "FUORILEGGE.pdf [cite: 715-716]",
+  "core_stats": {
+    "base_evasion": 12,
+    "primary_domains": ["mezzanotte", "grazia"],
+    "hope_resource_name": "Speranza",
+    "class_resource_name": "Ammantato"
+  },
+  "class_features": [
+    {
+      "id": "rogue_cloaked",
+      "name": "Ammantato",
+      "type": "passive",
+      "text": "Ogni volta che sareste Nascosti, siete invece Ammantati. Oltre ai benefici della condizione di Nascosto, quando siete Ammantati rimanete invisibili se siete fermi quando un avversario si sposta dove normalmente vi vedrebbe. Quando vi spostate entro la linea di vista di un avversario o effettuate un attacco, non siete più Ammantati.",
+      "citation": "FUORILEGGE.pdf [cite: 691-693]"
+    },
+    {
+      "id": "rogue_sneak_attack",
+      "name": "Attacco Furtivo",
+      "type": "passive",
+      "text": "Quando colpite mentre siete Ammantati o mentre un alleato si trova a distanza di Mischia dal bersaglio, aggiungete al tiro per i danni un numero di d6 pari al vostro rango.",
+      "citation": "FUORILEGGE.pdf [cite: 700-702]"
+    },
+    {
+      "id": "rogue_dodge",
+      "name": "Schivata del Fuorilegge",
+      "type": "hope",
+      "text": "Spendete 3 Speranze per ottenere bonus +2 all'Evasione fino al successivo attacco riuscito contro di voi. Diversamente, questo bonus dura fino al riposo successivo.",
+      "citation": "FUORILEGGE.pdf [cite: 676-677]"
+    }
+  ],
+  "subclasses": [
+    {
+      "id": "rogue_syndicate",
+      "name": "Sindacato",
+      "description": "Un capo criminale che fa affidamento su una rete di contatti e sull'inganno sociale.",
+      "features": [
+        {
+          "name": "La Famiglia",
+          "text": "Hai contatti ovunque. Una volta per sessione, puoi chiedere un favore a un contatto criminale per ottenere informazioni, oggetti illegali o un passaggio sicuro."
+        }
+      ]
+    },
+    {
+      "id": "rogue_nightwalker",
+      "name": "Ombra",
+      "description": "Un ladro mistico che utilizza la magia dell'oscurità per muoversi non visto.",
+      "features": [
+        {
+          "name": "Veste d'Ombra",
+          "text": "Puoi invocare le ombre per nasconderti. Puoi marcare 1 Stress per diventare immediatamente Ammantato, anche se sei in piena vista (purché ci sia un'ombra vicina)."
+        }
+      ]
+    }
+  ],
+  "creation_guide": {
+    "recommended_traits": {
+      "agilita": 1,
+      "forza": -1,
+      "astuzia": 2,
+      "istinto": 0,
+      "presenza": 1,
+      "conoscenza": 0
+    },
+    "starting_equipment_choices": [
+      {
+        "id": "loadout_fuorilegge_a",
+        "label": "Fuorilegge Standard",
+        "items": [
+          {
+            "type": "weapon",
+            "name": "Pugnale",
+            "stats": "Astuzia, Mischia d8+1 fis, A una mano",
+            "citation": "FUORILEGGE.pdf [cite: 727]"
+          },
+          {
+            "type": "weapon",
+            "name": "Stiletto",
+            "stats": "Astuzia, Mischia d8 fis, A una mano",
+            "passive_effect": "Accoppiato: +2 al danno dell'arma primaria contro bersagli in mischia",
+            "citation": "FUORILEGGE.pdf [cite: 732, 736-738]"
+          },
+          {
+            "type": "armor",
+            "name": "Gambesone",
+            "stats": "Soglie 5/11, Punteggio Base 3",
+            "passive_effect": "Flessibile: +1 all'Evasione",
+            "citation": "FUORILEGGE.pdf [cite: 745]"
+          },
+          {
+            "type": "item",
+            "name": "Torcia, 16m di corda, provviste di base, una manciata d'oro",
+            "citation": "FUORILEGGE.pdf [cite: 723, 726]"
+          }
+        ]
+      }
+    ],
+    "selectable_items_options": [
+      "Una pozione di salute minore",
+      "Una pozione di recupero minore",
+      "Attrezzatura da falsario",
+      "Un rampino"
+    ]
+  },
+  "available_domains_filter": {
+    "instruction": "Seleziona 2 carte dai domini Mezzanotte e Grazia.",
+    "valid_domains": ["mezzanotte", "grazia"],
+    "valid_level": 1
+  },
+  "narrative_prompts": {
+    "background_questions": [
+      "Cosa hai fatto per essere esiliato dalla tua comunità?",
+      "Avevi una vita diversa, ma hai cercato di lasciartela alle spalle. Chi del tuo passato ti sta ancora inseguendo?"
+    ],
+    "bond_questions": [
+      "Cosa ti ho convinto a fare di recente che ci ha messo entrambi nei guai?",
+      "Cosa ho scoperto del tuo passato che tengo nascosto agli altri?",
+      "A chi hai detto addio con più dispiacere?",
+      "Chi conosci del mio passato e come ha influenzato i tuoi sentimenti nei miei confronti?"
+    ],
+    "citation": "FUORILEGGE.pdf [cite: 748-759]"
+  }
+}
