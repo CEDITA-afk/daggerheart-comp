@@ -5,6 +5,7 @@ import 'wizard_screen.dart';
 import 'character_sheet_screen.dart';
 import 'gm_dashboard_screen.dart';
 import 'lobby_screen.dart'; // Assicurati che questo file esista
+import '../../logic/room_provider.dart';
 
 class CharacterListScreen extends StatefulWidget {
   const CharacterListScreen({super.key});
@@ -20,6 +21,10 @@ class _CharacterListScreenState extends State<CharacterListScreen> {
   void initState() {
     super.initState();
     _loadFuture = Provider.of<CreationProvider>(context, listen: false).loadSavedCharacters();
+    // TENTATIVO DI RICONNESSIONE AUTOMATICA
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Provider.of<RoomProvider>(context, listen: false).init();
+    });
   }
 
   @override

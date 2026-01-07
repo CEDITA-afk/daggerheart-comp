@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart'; // Importante per il RoomProvider
+import 'package:provider/provider.dart'; 
 import '../../data/models/character.dart';
 import '../../data/data_manager.dart';
 import '../../logic/json_data_service.dart';
@@ -75,6 +75,15 @@ class _CharacterSheetScreenState extends State<CharacterSheetScreen> {
                   )
                 : null,
             actions: [
+              // --- NUOVO PULSANTE COMBATTIMENTO (SOLO ONLINE) ---
+              if (roomProvider.currentRoomCode != null && roomProvider.activeCombatantsData.isNotEmpty)
+                IconButton(
+                  icon: const Icon(Icons.flash_on, color: Colors.redAccent), // Icona Spade non standard, usiamo swords o simile
+                  // Nota: Se Icons.swords non esiste nella tua versione flutter, usa Icons.flash_on o Icons.security
+                  tooltip: "Vedi Combattimento",
+                  onPressed: () => _showCombatDialog(context, roomProvider),
+                ),
+
               // Menu Opzioni (Export/Salva)
               PopupMenuButton<String>(
                 onSelected: (value) => _handleMenuAction(value, char),
@@ -129,6 +138,8 @@ class _CharacterSheetScreenState extends State<CharacterSheetScreen> {
     );
   }
 
+  // --- WIDGET HELPER ---
+
   Widget _buildTabItem(int index, IconData icon, String label) {
     bool isSelected = _currentTabIndex == index;
     return GestureDetector(
@@ -155,6 +166,76 @@ class _CharacterSheetScreenState extends State<CharacterSheetScreen> {
           ],
         ),
       ),
+    );
+  }
+
+  // --- LOGICA DIALOGO COMBATTIMENTO ---
+  void _showCombatDialog(BuildContext context, RoomProvider roomProvider) {
+    showDialog(
+      context: context, 
+      builder: (_) => AlertDialog(
+        backgroundColor: const Color(0xFF1E1E1E),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: const Row(
+          children: [
+            Icon(Icons.warning_amber_rounded, color: Colors.redAccent),
+            SizedBox(width: 10),
+            Text("COMBATTIMENTO", style: TextStyle(color: Colors.white, fontFamily: 'Cinzel')),
+          ],
+        ),
+        content: SizedBox(
+          width: double.maxFinite,
+          child: ListView.separated(
+            shrinkWrap: true,
+            itemCount: roomProvider.activeCombatantsData.length,
+            separatorBuilder: (ctx, i) => const Divider(color: Colors.white24),
+            itemBuilder: (ctx, i) {
+                final c = roomProvider.activeCombatantsData[i];
+                final isPlayer = c['isPlayer'] == true;
+                
+                return ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: CircleAvatar(
+                    backgroundColor: isPlayer ? Colors.blue[900] : Colors.red[900],
+                    child: Icon(
+                      isPlayer ? Icons.person : Icons.android, 
+                      color: Colors.white, size: 20
+                    ),
+                  ),
+                  title: Text(
+                    c['name'] ?? 'Sconosciuto', 
+                    style: TextStyle(
+                      color: isPlayer ? Colors.blueAccent : Colors.redAccent,
+                      fontWeight: FontWeight.bold
+                    )
+                  ),
+                  subtitle: Text(
+                    "HP: ${c['currentHp']}/${c['maxHp']}", 
+                    style: const TextStyle(color: Colors.white70)
+                  ),
+                  trailing: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: Colors.black45,
+                      borderRadius: BorderRadius.circular(4),
+                      border: Border.all(color: Colors.white12)
+                    ),
+                    child: Text(
+                      isPlayer ? "ALLEATO" : "NEMICO",
+                      style: TextStyle(fontSize: 10, color: isPlayer ? Colors.blue : Colors.red),
+                    ),
+                  ),
+                );
+            },
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context), 
+            child: const Text("CHIUDI", style: TextStyle(color: Colors.grey))
+          )
+        ],
+      )
     );
   }
 
