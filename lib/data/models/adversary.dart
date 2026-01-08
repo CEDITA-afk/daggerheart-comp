@@ -16,8 +16,8 @@ class AdversaryFeature {
 class Adversary {
   final String id;
   String name;
-  String campaign; // ES: "Age of Umbra"
-  String tier;     // ES: "Tier 1 Leader"
+  String campaign; 
+  String tier;     
   String description;
   int currentHp;
   int maxHp;
@@ -27,7 +27,7 @@ class Adversary {
   String attackName; 
   int attackMod; 
   String damageDice;
-  String thresholds; // ES: "6/12"
+  String thresholds; 
   List<AdversaryFeature> features;
 
   Adversary({
@@ -50,9 +50,29 @@ class Adversary {
     if (currentHp == -1) currentHp = maxHp;
   }
 
+  // --- METODO FONDAMENTALE PER IL COMBATTIMENTO ---
+  // Crea una copia esatta del mostro ma con un NUOVO ID
+  Adversary clone() {
+    return Adversary(
+      name: name,
+      campaign: campaign,
+      tier: tier,
+      description: description,
+      maxHp: maxHp,
+      maxStress: maxStress,
+      difficulty: difficulty,
+      attackName: attackName,
+      attackMod: attackMod,
+      damageDice: damageDice,
+      thresholds: thresholds,
+      // Copiamo la lista per evitare riferimenti condivisi
+      features: List.from(features), 
+    );
+  }
+
   factory Adversary.fromJson(Map<String, dynamic> json) {
     return Adversary(
-      id: const Uuid().v4(), // Generiamo un nuovo ID univoco per l'istanza in combattimento
+      id: const Uuid().v4(), 
       name: json['name'] ?? 'Sconosciuto',
       campaign: json['campaign'] ?? 'Generico',
       tier: json['tier'] ?? '',
