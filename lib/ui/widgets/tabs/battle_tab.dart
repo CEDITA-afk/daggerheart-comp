@@ -11,7 +11,7 @@ class BattleTab extends StatelessWidget {
       builder: (context, room, child) {
         final combatants = room.activeCombatantsData;
 
-        // SE NON C'Ãˆ COMBATTIMENTO
+        // SE NON C'È COMBATTIMENTO
         if (combatants.isEmpty) {
           return Center(
             child: Column(
@@ -52,7 +52,7 @@ class BattleTab extends StatelessWidget {
 
             // --- LISTA COMBATTENTI ---
             ...combatants.map((c) {
-              final isPlayer = c['isPlayer'] == true;
+              final isPlayer = c['isPlayer'] == true; // True = Alleato, False = Mostro
               final name = c['name'] ?? 'Sconosciuto';
               
               // Calcoli HP (servono solo per gli alleati)
@@ -69,11 +69,11 @@ class BattleTab extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                   side: BorderSide(
-                    // Bordo solo per alleati
+                    // Bordo colorato solo per alleati
                     color: isPlayer ? Colors.blueAccent.withOpacity(0.3) : Colors.transparent,
                   ),
                 ),
-                // NESSUN INKWELL -> NIENTE CLICK
+                // NOTA: Abbiamo rimosso InkWell/onTap, quindi niente è cliccabile qui.
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
                   child: Column(
@@ -88,7 +88,7 @@ class BattleTab extends StatelessWidget {
                           ),
                           const SizedBox(width: 16),
                           
-                          // NOME
+                          // NOME (Unico dato visibile per tutti)
                           Expanded(
                             child: Text(
                               name,
@@ -100,7 +100,7 @@ class BattleTab extends StatelessWidget {
                             ),
                           ),
                           
-                          // TESTO HP (VISIBILE SOLO SE Ãˆ UN ALLEATO)
+                          // TESTO HP (VISIBILE SOLO SE È UN ALLEATO)
                           if (isPlayer)
                             Text(
                               "$currentHp / $maxHp HP",
@@ -109,7 +109,7 @@ class BattleTab extends StatelessWidget {
                         ],
                       ),
                       
-                      // BARRA HP (VISIBILE SOLO SE Ãˆ UN ALLEATO)
+                      // BARRA HP (VISIBILE SOLO SE È UN ALLEATO)
                       if (isPlayer) ...[
                         const SizedBox(height: 12),
                         ClipRRect(
